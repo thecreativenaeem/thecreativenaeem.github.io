@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7-Day Client Hunting Roadmap | Creative Naeem</title>
+  <meta name="description" content="Join Creative Naeem's free 7-day Client Hunting Roadmap and get one practical LinkedIn client-hunting lesson by email each day.">
+  <link rel="icon" href="assets/myphoto.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/myphoto.png">
+  <style>
+    :root{
+      --bg:#05060a;
+      --panel:#10131d;
+      --panel-2:#171b28;
+      --text:#fff8ea;
+      --muted:#b9b4aa;
+      --line:rgba(255,255,255,.12);
+      --gold:#fcc932;
+      --gold-soft:rgba(252,201,50,.14);
+      --shadow:0 28px 90px rgba(0,0,0,.48);
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 16% 8%, rgba(252,201,50,.18), transparent 26rem),
+        radial-gradient(circle at 88% 18%, rgba(255,255,255,.07), transparent 30rem),
+        linear-gradient(180deg,#05060a 0%,#090b12 46%,#05060a 100%);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--max), calc(100% - 40px));margin-inline:auto}
+    .nav{
+      height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .brand img{height:48px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:8px;color:#e8e2d6;font-weight:800;font-size:14px}
+    .nav-links a{padding:10px 13px;border-radius:999px;color:var(--muted)}
+    .nav-links a:hover{background:rgba(255,255,255,.07);color:var(--text)}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      border-radius:999px;
+      padding:13px 20px;
+      background:var(--gold);
+      color:#0c0a05;
+      font-weight:900;
+      border:0;
+      cursor:pointer;
+      box-shadow:0 18px 44px rgba(252,201,50,.22);
+    }
+    .hero{padding:84px 0 58px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 12px;
+      border:1px solid rgba(252,201,50,.28);
+      background:var(--gold-soft);
+      color:#ffe28a;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:850;
+      margin-bottom:20px;
+    }
+    .badge::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:99px;
+      background:var(--gold);
+      box-shadow:0 0 0 6px rgba(252,201,50,.12);
+    }
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      font-size:clamp(46px,7vw,86px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      margin-bottom:24px;
+    }
+    .accent{color:var(--gold)}
+    .lead{font-size:clamp(18px,2vw,22px);color:#ded8cd;max-width:720px;margin-bottom:28px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .subnote{color:var(--muted);font-size:14px;margin-top:18px}
+    .signup-card{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .signup-card h2{font-size:clamp(28px,3vw,42px);line-height:1.04;letter-spacing:-.04em;margin-bottom:10px}
+    .signup-card p{color:var(--muted);margin-bottom:18px}
+    .lesson-list{display:grid;gap:10px;margin:22px 0;padding:0;list-style:none}
+    .lesson-list li{
+      display:flex;
+      gap:10px;
+      padding:12px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      background:rgba(255,255,255,.04);
+      color:#e7e0d4;
+      font-weight:750;
+      font-size:14px;
+    }
+    .lesson-list li::before{content:"✓";color:var(--gold);font-weight:950}
+    .ck-wrap{
+      border:1px solid rgba(252,201,50,.24);
+      background:#0a0c12;
+      border-radius:22px;
+      padding:18px;
+      margin-top:20px;
+    }
+    .formkit-form{
+      max-width:none !important;
+      border:0 !important;
+      background:transparent !important;
+      border-radius:0 !important;
+      overflow:visible !important;
+    }
+    .formkit-form [data-style="minimal"]{padding:0 !important}
+    .formkit-header,.formkit-subheader,.formkit-background{display:none !important}
+    .formkit-fields{display:grid !important;gap:12px !important;margin:0 !important}
+    .formkit-field,.formkit-submit{margin:0 !important;min-width:0 !important}
+    .formkit-input{
+      width:100% !important;
+      min-height:50px !important;
+      border:1px solid rgba(255,255,255,.13) !important;
+      background:rgba(255,255,255,.07) !important;
+      color:var(--text) !important;
+      border-radius:14px !important;
+      padding:14px 15px !important;
+      font:inherit !important;
+    }
+    .formkit-input::placeholder{color:#9f9a92 !important}
+    .formkit-submit{
+      width:100% !important;
+      min-height:52px !important;
+      border-radius:999px !important;
+      background:var(--gold) !important;
+      color:#0c0a05 !important;
+      font-weight:950 !important;
+    }
+    .formkit-submit span{padding:15px 18px !important}
+    .formkit-guarantee{color:var(--muted) !important;margin:12px 0 0 !important;font-size:12px !important;text-align:center !important}
+    .formkit-powered-by-convertkit-container{display:none !important}
+    .section{padding:78px 0;border-top:1px solid rgba(255,255,255,.07)}
+    .section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:28px}
+    .kicker{color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:.16em;font-weight:900;margin-bottom:10px}
+    .section h2{font-size:clamp(34px,5vw,62px);line-height:1;letter-spacing:-.055em;margin-bottom:0;max-width:760px}
+    .section-head p{color:var(--muted);max-width:430px;margin:0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+      border-radius:24px;
+      padding:24px;
+    }
+    .card-number{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--gold-soft);border:1px solid rgba(252,201,50,.22);color:var(--gold);font-weight:950;margin-bottom:16px}
+    .card h3{font-size:22px;line-height:1.12;margin-bottom:9px}
+    .card p{color:var(--muted);margin:0}
+    .roadmap{display:grid;gap:14px}
+    .day{
+      display:grid;
+      grid-template-columns:90px 1fr;
+      gap:18px;
+      align-items:start;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:24px;
+      padding:20px;
+    }
+    .day strong{display:grid;place-items:center;min-height:64px;border-radius:18px;background:var(--gold);color:#0c0a05;font-size:19px}
+    .day h3{margin-bottom:5px}
+    .day p{color:var(--muted);margin:0}
+    .cta{
+      border:1px solid rgba(252,201,50,.28);
+      background:linear-gradient(135deg,rgba(252,201,50,.16),rgba(255,255,255,.045));
+      border-radius:32px;
+      padding:44px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:24px;
+      align-items:center;
+    }
+    .cta h2{font-size:clamp(32px,5vw,58px)}
+    .cta p{color:#ded8cd;margin:12px 0 0;max-width:660px}
+    .footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.07);color:var(--muted);font-size:14px}
+    @media(max-width:900px){
+      .hero-grid,.grid-3,.cta{grid-template-columns:1fr}
+      .section-head{display:block}
+      .section-head p{margin-top:12px}
+      .nav-links .hide-sm{display:none}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 28px,var(--max))}
+      .nav{height:74px}
+      .brand img{height:42px}
+      .hero{padding:56px 0 42px}
+      h1{font-size:43px}
+      .signup-card,.cta{padding:24px}
+      .day{grid-template-columns:1fr}
+      .day strong{min-height:auto;padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Creative Naeem home"><img src="assets/logo.png" alt="Creative Naeem"></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="hide-sm" href="contact.html">Contact</a>
+        <a class="btn" href="#signup">Get lesson 1</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Free 7-day email training</div>
+          <h1>Learn the <span class="accent">client hunting</span> roadmap for LinkedIn in 7 days.</h1>
+          <p class="lead">A practical email training for freelancers who want to find better prospects, start better conversations, and build a simple daily system for getting client opportunities.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#signup">Send me the first lesson</a>
+          </div>
+          <div class="subnote">Lesson 1 arrives first. The next lessons come day by day, one step at a time.</div>
+        </div>
+
+        <aside id="signup" class="signup-card">
+          <div class="kicker">Start here</div>
+          <h2>Get instant access to Lesson #1.</h2>
+          <p>Enter your name and email. You will receive the first lesson now, then the remaining lessons over the next 7 days.</p>
+          <ul class="lesson-list">
+            <li>Fix your profile so prospects understand your offer.</li>
+            <li>Choose a target client type instead of chasing everyone.</li>
+            <li>Send smarter messages without sounding needy.</li>
+          </ul>
+          <div class="ck-wrap">
+            <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+            <form action="https://app.kit.com/forms/9640989/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9640989" data-uid="ace523a607" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;powered_by&quot;:{&quot;show&quot;:false}},&quot;version&quot;:&quot;5&quot;}">
+              <div data-style="minimal">
+                <div class="formkit-header" data-element="header"><h2></h2></div>
+                <div class="formkit-subheader" data-element="subheader"><p></p></div>
+                <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                <div data-element="fields" data-stacked="true" class="seva-fields formkit-fields">
+                  <div class="formkit-field">
+                    <input class="formkit-input" aria-label="First Name" name="fields[first_name]" placeholder="First Name" type="text">
+                  </div>
+                  <div class="formkit-field">
+                    <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email">
+                  </div>
+                  <button data-element="submit" class="formkit-submit" type="submit">
+                    <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                    <span>Send me the first lesson</span>
+                  </button>
+                </div>
+                <div class="formkit-guarantee" data-element="guarantee">No spam. Unsubscribe anytime.</div>
+              </div>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">What you will build</div>
+            <h2>A simple system for finding and starting client conversations.</h2>
+          </div>
+          <p>This is not random posting advice. It is a step-by-step client hunting routine for freelancers using LinkedIn.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="card-number">1</div><h3>A clearer profile</h3><p>Make it obvious who you help, what you sell, and why a prospect should trust you.</p></article>
+          <article class="card"><div class="card-number">2</div><h3>A sharper target list</h3><p>Know which clients to look for, what signals to check, and who is worth messaging.</p></article>
+          <article class="card"><div class="card-number">3</div><h3>A better DM approach</h3><p>Start useful conversations with personalized observations instead of generic pitches.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">The roadmap</div>
+            <h2>One focused lesson per day.</h2>
+          </div>
+        </div>
+        <div class="roadmap">
+          <div class="day"><strong>Day 1</strong><div><h3>Profile as your sales page</h3><p>Clean up the first impression prospects see before they reply.</p></div></div>
+          <div class="day"><strong>Day 2</strong><div><h3>Pick one client type</h3><p>Choose a market so your search, content, and outreach become specific.</p></div></div>
+          <div class="day"><strong>Day 3</strong><div><h3>Find buying signals</h3><p>Spot people and companies more likely to need your service now.</p></div></div>
+          <div class="day"><strong>Day 4</strong><div><h3>Build a target list</h3><p>Create a small daily list instead of scrolling and hoping.</p></div></div>
+          <div class="day"><strong>Day 5</strong><div><h3>Send value-first messages</h3><p>Use a useful observation before asking for anything.</p></div></div>
+          <div class="day"><strong>Day 6</strong><div><h3>Follow up without pressure</h3><p>Stay visible and helpful without sounding pushy.</p></div></div>
+          <div class="day"><strong>Day 7</strong><div><h3>Turn replies into calls</h3><p>Move good conversations toward a clear next step.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta">
+        <div>
+          <div class="kicker">Ready?</div>
+          <h2>Get the first lesson and start the 7-day roadmap.</h2>
+          <p>Build your daily client hunting routine in small steps that are easy to execute.</p>
+        </div>
+        <a class="btn" href="#signup">Join free</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Creative Naeem - LinkedIn client hunting and brand clarity for freelancers.</div>
+  </footer>
+</body>
+</html>

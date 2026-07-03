@@ -1,1 +1,761 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30-Day LinkedIn Client Hunting Roadmap</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #111936;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-strong: rgba(255, 255, 255, 0.13);
+      --text: #f8fafc;
+      --muted: #b8c0d9;
+      --gold: #f7c873;
+      --gold-2: #d99b38;
+      --blue: #66a6ff;
+      --green: #62d6a4;
+      --red: #ff7b7b;
+      --border: rgba(255,255,255,0.14);
+      --shadow: 0 24px 70px rgba(0,0,0,0.35);
+      --radius: 26px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(102,166,255,0.32), transparent 34rem),
+        radial-gradient(circle at top right, rgba(247,200,115,0.26), transparent 30rem),
+        linear-gradient(135deg, #070b16 0%, #0b1020 48%, #121a33 100%);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 0 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 750;
+      letter-spacing: 0.3px;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--gold), var(--blue));
+      display: grid;
+      place-items: center;
+      color: #09101f;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(247,200,115,0.2);
+    }
+
+    .badge {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(16px);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.13), rgba(255,255,255,0.05)),
+        radial-gradient(circle at 78% 28%, rgba(247,200,115,0.25), transparent 22rem);
+      border-radius: 34px;
+      padding: clamp(28px, 5vw, 66px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 74px);
+      line-height: 0.98;
+      letter-spacing: -2.5px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      max-width: 700px;
+      margin: 22px 0 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      color: #101624;
+      background: linear-gradient(135deg, var(--gold), #ffe0a1);
+      box-shadow: 0 18px 38px rgba(247,200,115,0.2);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .hero-card {
+      border: 1px solid var(--border);
+      background: rgba(9,15,30,0.72);
+      backdrop-filter: blur(18px);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 28px 70px rgba(0,0,0,0.35);
+    }
+
+    .metric {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.10);
+      margin-bottom: 12px;
+    }
+
+    .metric:last-child {
+      margin-bottom: 0;
+    }
+
+    .metric .number {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -1.4px;
+      color: var(--gold);
+    }
+
+    .metric .label {
+      color: var(--muted);
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 34px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.065);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      padding: clamp(22px, 4vw, 40px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      margin: 0;
+      letter-spacing: -1.2px;
+    }
+
+    .section .intro {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 17px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(247,200,115,0.35);
+      color: var(--gold);
+      background: rgba(247,200,115,0.09);
+      font-weight: 800;
+      white-space: nowrap;
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.11);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      letter-spacing: -0.4px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .phase {
+      position: relative;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.065);
+      border: 1px solid rgba(255,255,255,0.11);
+      margin-top: 14px;
+    }
+
+    .day {
+      display: grid;
+      place-items: center;
+      width: 86px;
+      height: 86px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(247,200,115,0.22), rgba(102,166,255,0.15));
+      border: 1px solid rgba(247,200,115,0.25);
+      text-align: center;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+
+    .phase h3 {
+      margin: 0 0 8px;
+      font-size: 23px;
+      letter-spacing: -0.5px;
+    }
+
+    .phase p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 19px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .check {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 17px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: var(--muted);
+    }
+
+    .check span {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(98,214,164,0.16);
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .script-box {
+      background: #080d1b;
+      border: 1px solid rgba(247,200,115,0.22);
+      border-radius: 22px;
+      padding: 22px;
+      font-size: 16px;
+      color: #e9edf8;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .script-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .cta {
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(247,200,115,0.18), rgba(102,166,255,0.12)),
+        rgba(255,255,255,0.08);
+      border: 1px solid rgba(247,200,115,0.25);
+    }
+
+    .cta h2 {
+      max-width: 840px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 14px auto 0;
+      font-size: 18px;
+    }
+
+    .mini-note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    .footer {
+      color: var(--muted);
+      text-align: center;
+      padding: 28px 0 0;
+      font-size: 14px;
+    }
+
+    .print-strip {
+      display: none;
+    }
+
+    @media (max-width: 880px) {
+      .hero-inner,
+      .grid,
+      .two-col,
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .phase {
+        grid-template-columns: 1fr;
+      }
+
+      .day {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #111827;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .topbar, .hero-actions, .footer {
+        display: none;
+      }
+
+      .hero, .section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #d7dce8;
+        background: #fff;
+        color: #111827;
+      }
+
+      .hero-card, .card, .phase, .check, .script-box {
+        background: #fff;
+        color: #111827;
+        border: 1px solid #d7dce8;
+      }
+
+      .hero p, .intro, .card p, .card li, .phase p, ul, li, .check, .cta p, .mini-note {
+        color: #4b5563;
+      }
+
+      .print-strip {
+        display: block;
+        padding: 12px 0;
+        text-align: center;
+        color: #4b5563;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-mark">L</div>
+        <div>LinkedIn Client Hunting Roadmap</div>
+      </div>
+      <div class="badge">Free Premium Guide for Freelancers</div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">30-Day Action Plan</div>
+          <h1>LinkedIn Client Hunting Roadmap</h1>
+          <p>
+            A simple, practical system to optimize your profile, build visibility, connect with the right people, and start better conversations that can turn into direct clients.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#roadmap">Start the Roadmap</a>
+            <a class="button secondary" href="#session">Book 1:1 Session</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="metric">
+            <div class="number">30</div>
+            <div class="label">days of focused LinkedIn client hunting</div>
+          </div>
+          <div class="metric">
+            <div class="number">$500</div>
+            <div class="label">target client value to build toward</div>
+          </div>
+          <div class="metric">
+            <div class="number">4</div>
+            <div class="label">core areas: profile, content, network, outreach</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Before you start</h2>
+          <p class="intro">
+            Most freelancers are not stuck because they lack skill. They are stuck because their profile, positioning, and outreach do not create enough trust.
+          </p>
+        </div>
+        <div class="tag">Value first, pitch later</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Skill alone is not enough</h3>
+          <p>Your target client needs to understand what problem you solve and why you are worth trusting.</p>
+        </div>
+        <div class="card">
+          <h3>Your profile is your sales page</h3>
+          <p>Before clients reply, they check your profile. Make it clear, specific, and result-focused.</p>
+        </div>
+        <div class="card">
+          <h3>Outreach is not begging</h3>
+          <p>Good outreach starts with useful observation, not “sir please give me work.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="section-header">
+        <div>
+          <h2>The 30-Day Roadmap</h2>
+          <p class="intro">Follow this in order. Don’t jump straight to pitching before your profile and targeting are clear.</p>
+        </div>
+        <div class="tag">Simple daily execution</div>
+      </div>
+
+      <div class="phase">
+        <div class="day">Day<br>1-3</div>
+        <div>
+          <h3>Optimize your LinkedIn profile</h3>
+          <p>Your profile should explain who you help, what you do, what result you create, and why someone should trust you.</p>
+          <ul>
+            <li>Use a clear profile picture with your face visible.</li>
+            <li>Add a banner that explains your service and audience.</li>
+            <li>Write a result-focused headline, not just your job title.</li>
+            <li>Use the Featured section for portfolio, case studies, or proof.</li>
+            <li>Make your About section about the client’s problem and your solution.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="day">Day<br>4-7</div>
+        <div>
+          <h3>Choose one target client type</h3>
+          <p>When you target everyone, your message becomes weak. Choose a specific audience so your content and outreach become sharper.</p>
+          <ul>
+            <li>Coaches and consultants</li>
+            <li>Agency owners</li>
+            <li>Ecommerce brands</li>
+            <li>SaaS founders</li>
+            <li>Content creators</li>
+            <li>Local businesses</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="day">Day<br>8-15</div>
+        <div>
+          <h3>Post useful content daily</h3>
+          <p>Do not only post motivation. Post content that shows you understand the client’s business problem.</p>
+          <ul>
+            <li>Common mistakes your target clients make</li>
+            <li>Before and after breakdowns</li>
+            <li>Simple tips related to your service</li>
+            <li>Your process and how you solve problems</li>
+            <li>Client results, portfolio, or lessons learned</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="day">Day<br>16-25</div>
+        <div>
+          <h3>Build a targeted network</h3>
+          <p>Add people who can actually buy your service or refer you to someone who can. Random connections do not build a real pipeline.</p>
+          <ul>
+            <li>Send 10 to 20 targeted connection requests daily.</li>
+            <li>Engage with their posts before pitching.</li>
+            <li>Keep your connection note short and human.</li>
+            <li>Track who accepts, replies, and engages back.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="day">Day<br>26-30</div>
+        <div>
+          <h3>Start personalized outreach</h3>
+          <p>Do not start with a pitch. Start with a useful observation. Show that you actually looked at their business.</p>
+          <ul>
+            <li>Find a real improvement point.</li>
+            <li>Send a short, specific message.</li>
+            <li>Offer 1 to 2 useful suggestions.</li>
+            <li>Move to a call only after interest is shown.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Profile checklist</h2>
+          <p class="intro">Fix these before you send serious outreach. Your profile directly affects your reply rate.</p>
+        </div>
+        <div class="tag">Quick audit</div>
+      </div>
+
+      <div class="checklist">
+        <div class="check"><span>✓</span><div>My headline says who I help and what result I create.</div></div>
+        <div class="check"><span>✓</span><div>My banner clearly explains my offer in simple words.</div></div>
+        <div class="check"><span>✓</span><div>My About section talks about the client’s problem, not just my story.</div></div>
+        <div class="check"><span>✓</span><div>My Featured section has proof, portfolio, case study, or service details.</div></div>
+        <div class="check"><span>✓</span><div>My profile picture looks clear, professional, and trustworthy.</div></div>
+        <div class="check"><span>✓</span><div>My content shows I understand the client’s problem.</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Outreach scripts</h2>
+          <p class="intro">Use these as a base. Customize them for every person. Copy-paste spam will ruin your chances.</p>
+        </div>
+        <div class="tag">Use with care</div>
+      </div>
+
+      <div class="two-col">
+        <div class="script-box">
+          <div class="script-label">Profile optimization angle</div>
+          Hey [Name], I checked your LinkedIn profile. Your service looks strong, but your headline and banner don’t clearly explain who you help and what result you create. I can share 2 quick suggestions if useful.
+        </div>
+        <div class="script-box">
+          <div class="script-label">Content improvement angle</div>
+          Hey [Name], I noticed you’re posting good content, but the first line of your posts could be stronger. A clearer hook can improve attention and replies. Want me to share one quick example?
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top: 14px;">
+        <div class="script-box">
+          <div class="script-label">Design/video angle</div>
+          Hey [Name], your content has good value, but the visual style could look more consistent. Stronger branding can make your posts look more premium and trustworthy. I can share a quick idea.
+        </div>
+        <div class="script-box">
+          <div class="script-label">Website/app angle</div>
+          Hey [Name], I checked your website on mobile. The offer is clear, but the page feels a bit slow and the CTA could be more visible. I can share 2 practical improvements if helpful.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Weekly execution tracker</h2>
+          <p class="intro">Use this to stay consistent. LinkedIn works when you repeat the right actions daily.</p>
+        </div>
+        <div class="tag">Track the work</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Daily minimum</h3>
+          <ul>
+            <li>1 useful post</li>
+            <li>10 targeted connections</li>
+            <li>10 minutes engagement</li>
+            <li>3 to 5 thoughtful DMs</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Weekly review</h3>
+          <ul>
+            <li>Profile views</li>
+            <li>Connection accepts</li>
+            <li>DM replies</li>
+            <li>Calls booked</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What to improve</h3>
+          <ul>
+            <li>Weak hooks</li>
+            <li>Unclear offer</li>
+            <li>Wrong target audience</li>
+            <li>Generic outreach</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="session">
+      <h2>Want me to review your LinkedIn profile personally?</h2>
+      <p>
+        If you want a direct review of your profile, offer, target audience, content direction, and client hunting strategy, you can book a paid 1:1 LinkedIn session with me.
+      </p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="button primary" href="http://calendly.com/thecreativenaeem/60min">Book Paid 1:1 Session</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/thecreativenaeem/">Connect on LinkedIn</a>
+      </div>
+      <div class="mini-note">
+        Replace the buttons above with your booking link and LinkedIn profile link before sharing this page.
+      </div>
+    </section>
+
+    <div class="footer">
+      Built for freelancers who want direct clients, better positioning, and a practical LinkedIn system.
+    </div>
+  </main>
+</body>
+</html>

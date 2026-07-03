@@ -3,43 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LinkedIn Client Hunting Roadmap | Creative Naeem</title>
-  <meta name="description" content="A simple LinkedIn client hunting roadmap for freelancers who want to find better prospects, start better conversations, and book more calls.">
+  <title>7-Day LinkedIn Client Hunting Guide | Creative Naeem</title>
+  <meta name="description" content="A complete 7-day LinkedIn client hunting guide for freelancers. Fix your profile, find prospects, send better DMs, follow up, and book calls.">
   <link rel="icon" href="assets/myphoto.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/myphoto.png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .guide-hero{padding:86px 0 70px}
-    .guide-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
-    .guide-panel{border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border-radius:28px;padding:28px;box-shadow:var(--shadow)}
-    .guide-panel h2{font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-.05em;margin-bottom:12px}
-    .guide-list{display:grid;gap:12px;margin:22px 0 0;padding:0;list-style:none}
-    .guide-list li{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.04);color:#e8e1d5}
-    .guide-list li::before{content:"";flex:0 0 9px;width:9px;height:9px;border-radius:99px;background:var(--primary);margin-top:8px;box-shadow:0 0 0 6px rgba(252,201,50,.1)}
-    .guide-strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .guide-page{counter-reset:day}
+    .guide-hero{padding:82px 0 54px}
+    .guide-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+    .guide-page h1{font-size:clamp(46px,6.4vw,82px);letter-spacing:-.055em}
+    .guide-cover{border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+    .guide-cover h2{font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-.05em;margin-bottom:12px}
+    .guide-cover p{color:var(--muted)}
+    .guide-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+    .guide-meta div{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:18px;padding:14px}
+    .guide-meta strong{display:block;color:var(--primary);font-size:26px;line-height:1}
+    .guide-meta span{display:block;color:var(--muted);font-size:13px;margin-top:7px}
+    .toc{display:grid;gap:10px;margin:20px 0 0;padding:0;list-style:none}
+    .toc a{display:flex;justify-content:space-between;gap:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:16px;padding:12px 14px;color:#eee8db;font-weight:800}
+    .toc span{color:var(--primary)}
+    .guide-strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
     .guide-strip span{padding:10px 14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);border-radius:999px;color:#e7e0d4;font-weight:750;font-size:14px}
-    .guide-steps{display:grid;gap:14px}
-    .guide-step{display:grid;grid-template-columns:88px 1fr;gap:18px;padding:22px;border:1px solid rgba(255,255,255,.09);border-radius:24px;background:rgba(255,255,255,.035)}
-    .guide-step-num{display:grid;place-items:center;min-height:64px;border-radius:18px;background:var(--primary);color:#0b0904;font-weight:950;text-align:center;line-height:1.1}
-    .guide-step h3{font-size:24px;letter-spacing:-.035em;margin-bottom:8px}
-    .guide-step p{color:var(--muted);margin-bottom:10px}
-    .guide-step ul{margin:0;padding-left:20px;color:#ded8cb}
-    .guide-step li{margin:7px 0}
-    .script-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .script-card{border:1px solid rgba(252,201,50,.22);background:#090b12;border-radius:22px;padding:20px}
-    .script-card h3{font-size:18px;margin-bottom:10px;color:var(--primary)}
-    .script-card p{color:#e8e1d5;margin:0;white-space:pre-line}
-    .tracker{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .tracker .card ul{margin:14px 0 0;padding-left:20px;color:#ded8cb}
-    .guide-note{border:1px solid rgba(252,201,50,.28);background:linear-gradient(135deg,rgba(252,201,50,.14),rgba(255,255,255,.04));border-radius:28px;padding:30px}
-    .guide-note p{color:#ded8cb;margin-bottom:0}
+    .guide-section{padding:76px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .guide-section h2{font-size:clamp(34px,4.8vw,62px);line-height:1;letter-spacing:-.055em;margin-bottom:14px}
+    .guide-section .lead{max-width:800px}
+    .lesson{border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));border-radius:30px;padding:30px;margin-top:22px}
+    .lesson-head{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:start;margin-bottom:24px}
+    .day-badge{display:grid;place-items:center;min-height:76px;border-radius:20px;background:var(--primary);color:#0b0904;font-weight:950;text-align:center;line-height:1.05}
+    .lesson h3{font-size:clamp(28px,3vw,42px);line-height:1.02;letter-spacing:-.045em;margin-bottom:8px}
+    .lesson p{color:var(--muted)}
+    .lesson-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+    .mini-card{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);border-radius:22px;padding:20px}
+    .mini-card h4{font-size:18px;color:#fff;margin:0 0 10px}
+    .mini-card p,.mini-card li{color:#dcd6cb}
+    .mini-card ul,.mini-card ol{margin:0;padding-left:20px}
+    .mini-card li{margin:8px 0}
+    .script-box{border:1px solid rgba(252,201,50,.24);background:#090b12;border-radius:20px;padding:18px;color:#eee8db;white-space:pre-line}
+    .script-box strong{color:var(--primary)}
+    .worksheet{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+    .worksheet div{border:1px solid rgba(252,201,50,.18);background:rgba(252,201,50,.08);border-radius:16px;padding:13px;color:#eee8db;font-weight:800}
+    .premium-note{border:1px solid rgba(252,201,50,.28);background:linear-gradient(135deg,rgba(252,201,50,.14),rgba(255,255,255,.04));border-radius:28px;padding:28px;margin-top:22px}
+    .premium-note p{color:#ded8cb;margin-bottom:0}
+    .mistake-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .mistake-list .card p{color:var(--muted)}
+    .final-cta{border:1px solid rgba(252,201,50,.3);background:linear-gradient(135deg,rgba(252,201,50,.16),rgba(255,255,255,.045));border-radius:34px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+    .final-cta p{color:#ded8cb;max-width:720px}
     @media(max-width:980px){
-      .guide-hero-grid,.script-grid,.tracker{grid-template-columns:1fr}
-      .guide-hero{padding:56px 0 44px}
+      .guide-hero-grid,.lesson-grid,.mistake-list,.final-cta{grid-template-columns:1fr}
+      .worksheet{grid-template-columns:repeat(2,1fr)}
+      .guide-hero{padding:56px 0 42px}
     }
     @media(max-width:640px){
-      .guide-step{grid-template-columns:1fr}
-      .guide-step-num{min-height:auto;padding:14px}
+      .guide-page h1{font-size:40px;line-height:.98;letter-spacing:-.035em}
+      .lesson{padding:22px}
+      .lesson-head{grid-template-columns:1fr}
+      .day-badge{min-height:auto;padding:15px}
+      .worksheet,.guide-meta{grid-template-columns:1fr}
+      .toc a{display:block}
+      .toc span{display:block;margin-bottom:5px}
     }
   </style>
 </head>
@@ -60,265 +82,443 @@
     </div>
   </header>
 
-  <main>
+  <main class="guide-page">
     <section class="guide-hero">
       <div class="container guide-hero-grid">
         <div>
-          <div class="badge"><span class="badge-dot"></span> Free roadmap for freelancers</div>
-          <h1>LinkedIn client hunting, explained like real life.</h1>
-          <p class="lead">If you are good at your work but still waiting for clients, this page will show you what to fix, who to search, what to say, and how to keep track without making it complicated.</p>
+          <div class="badge"><span class="badge-dot"></span> Premium free guide for freelancers</div>
+          <h1>7-Day LinkedIn Client Hunting Guide.</h1>
+          <p class="lead">This is a practical guide you can use without buying anything first. It shows you how to fix your profile, find the right people, warm them up, send real messages, follow up, and turn replies into calls.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#roadmap">Start the roadmap</a>
-            <a class="btn btn-secondary" href="#scripts">Use the scripts</a>
+            <a class="btn btn-primary" href="#day-1">Start Day 1</a>
+            <a class="btn btn-secondary" href="#scripts">Jump to scripts</a>
           </div>
           <div class="guide-strip">
-            <span>Profile clarity</span>
-            <span>Target search</span>
-            <span>Warm comments</span>
-            <span>Simple DMs</span>
-            <span>Follow-up</span>
+            <span>For freelancers</span>
+            <span>No spam DMs</span>
+            <span>Daily actions</span>
+            <span>Real scripts</span>
+            <span>Call booking system</span>
           </div>
         </div>
 
-        <aside class="guide-panel">
-          <div class="section-kicker">What this helps with</div>
-          <h2>Stop guessing who to message.</h2>
-          <p class="muted">Most freelancers do not need 100 random DMs. They need a clear profile, a small list of right people, and messages that feel human.</p>
-          <ul class="guide-list">
-            <li>Make your profile easy to understand before people reply.</li>
-            <li>Find people who may actually need your service.</li>
-            <li>Start conversations without begging or sounding spammy.</li>
+        <aside class="guide-cover">
+          <div class="section-kicker">Read this first</div>
+          <h2>You do not need more random posting.</h2>
+          <p>You need a simple client hunting system. Every day in this guide gives you one job. Do the job, keep the proof in a sheet, and repeat.</p>
+          <div class="guide-meta">
+            <div><strong>7</strong><span>days of focused work</span></div>
+            <div><strong>45m</strong><span>daily execution time</span></div>
+            <div><strong>35+</strong><span>prospects to review</span></div>
+            <div><strong>1</strong><span>simple tracking sheet</span></div>
+          </div>
+          <ul class="toc">
+            <li><a href="#day-1"><span>Day 1</span> Profile that explains your value</a></li>
+            <li><a href="#day-2"><span>Day 2</span> Pick the right client type</a></li>
+            <li><a href="#day-3"><span>Day 3</span> Search and find signals</a></li>
+            <li><a href="#day-4"><span>Day 4</span> Build your prospect sheet</a></li>
+            <li><a href="#day-5"><span>Day 5</span> Warm up and send DMs</a></li>
+            <li><a href="#day-6"><span>Day 6</span> Follow up without pressure</a></li>
+            <li><a href="#day-7"><span>Day 7</span> Turn replies into calls</a></li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <section class="section">
+    <section class="guide-section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Before you start</div>
-            <h2>Your profile is the page people check before they trust you.</h2>
-          </div>
-          <p>Do this first. If your profile is unclear, even a good DM can get ignored.</p>
-        </div>
+        <div class="section-kicker">The basic rule</div>
+        <h2>Client hunting is not begging. It is useful observation.</h2>
+        <p class="lead">You are not going to message strangers with "please give me work." You are going to find people who may need help, understand one real problem, and start a normal conversation around that problem.</p>
         <div class="grid-3">
-          <article class="card"><div class="icon">1</div><h3>Say who you help</h3><p>Do not only write your job title. Tell people the type of client you help.</p></article>
-          <article class="card"><div class="icon">2</div><h3>Say the result</h3><p>Make the outcome simple. More calls, better content, better design, clearer offer, better profile.</p></article>
-          <article class="card"><div class="icon">3</div><h3>Show proof</h3><p>Add portfolio, examples, client work, useful posts, or anything that makes trust easier.</p></article>
+          <article class="card"><div class="icon">1</div><h3>Right person</h3><p>Someone who can buy your service or send you to the person who can.</p></article>
+          <article class="card"><div class="icon">2</div><h3>Right reason</h3><p>A real signal: unclear profile, launch, weak CTA, inconsistent design, or active content with no offer.</p></article>
+          <article class="card"><div class="icon">3</div><h3>Right message</h3><p>A short useful message that proves you looked before you asked for attention.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="roadmap" class="section">
+    <section id="day-1" class="guide-section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">The roadmap</div>
-            <h2>Follow this in order. Do not jump straight to pitching.</h2>
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>1</div>
+            <div>
+              <div class="section-kicker">Profile foundation</div>
+              <h3>Make your profile clear before you message anyone.</h3>
+              <p>If someone opens your profile and still cannot understand what you do, your message has to work too hard. Today we fix the first impression.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="guide-steps">
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>1</div>
-            <div>
-              <h3>Fix the first 5 seconds of your profile</h3>
-              <p>A stranger should understand your work fast. Use this headline idea:</p>
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>Fix your headline</h4>
+              <p>Use this simple formula:</p>
+              <div class="script-box">I help [type of client] get [clear result] with [your service].</div>
+              <p>Examples:</p>
               <ul>
-                <li>I help [type of client] get [clear result] with [your service].</li>
-                <li>Example: I help coaches get better LinkedIn leads with profile and content strategy.</li>
-                <li>Keep your banner simple: who you help, what result, and how to contact you.</li>
+                <li>I help coaches get more LinkedIn calls with profile and content strategy.</li>
+                <li>I help agencies make their LinkedIn brand look premium and clear.</li>
+                <li>I help founders turn profile views into better client conversations.</li>
               </ul>
             </div>
-          </article>
-
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>2</div>
-            <div>
-              <h3>Pick one client type for now</h3>
-              <p>Do not search for "clients". Search for one kind of person.</p>
+            <div class="mini-card">
+              <h4>Fix your banner</h4>
+              <p>Your banner should not only look nice. It should explain the offer fast.</p>
               <ul>
-                <li>Coaches, consultants, agency owners, SaaS founders, ecommerce founders, local business owners, or creators.</li>
-                <li>Pick the group that is most likely to need your service.</li>
-                <li>You can change later. For now, focus makes the work easier.</li>
+                <li>Line 1: who you help</li>
+                <li>Line 2: the result you help them get</li>
+                <li>Line 3: what to do next, like "DM me audit"</li>
               </ul>
             </div>
-          </article>
+            <div class="mini-card">
+              <h4>Fix the first 3 lines of About</h4>
+              <p>Make it about the client's problem, not only your story.</p>
+              <div class="script-box">If your LinkedIn profile is getting views but not client conversations, the problem is usually not your skill.
 
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>3</div>
-            <div>
-              <h3>Search with words real people use</h3>
-              <p>Go to LinkedIn search and test phrases like these:</p>
-              <ul>
-                <li>"coach" "launching"</li>
-                <li>"consultant" "helping"</li>
-                <li>"agency owner" "looking for"</li>
-                <li>"founder" "building"</li>
-                <li>"new offer", "webinar", "hiring", "opening spots", "new website"</li>
-              </ul>
-            </div>
-          </article>
+It is that your offer, profile, and content are not making the next step clear.
 
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>4</div>
-            <div>
-              <h3>Look for a real reason to message</h3>
-              <p>Do not message only because they have a title. Find one useful signal first.</p>
-              <ul>
-                <li>Their profile does not explain the offer clearly.</li>
-                <li>They post often but do not have a clear next step.</li>
-                <li>They are launching something new.</li>
-                <li>Their design, content, or profile does not match the level of service they sell.</li>
-              </ul>
+I help [client type] fix that with [your service].</div>
             </div>
-          </article>
-
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>5</div>
-            <div>
-              <h3>Warm up before you DM</h3>
-              <p>Leave one useful comment before sending a message. Not "great post". Say something that adds to the topic.</p>
-              <ul>
-                <li>Read their post properly.</li>
-                <li>Comment one useful point.</li>
-                <li>Write your observation in a sheet before you message them.</li>
-              </ul>
+            <div class="mini-card">
+              <h4>What you should finish today</h4>
+              <ol>
+                <li>New headline</li>
+                <li>Clear banner message</li>
+                <li>Better first 3 About lines</li>
+                <li>Three Featured items: proof, portfolio, service post, or useful guide</li>
+              </ol>
             </div>
-          </article>
-
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>6</div>
-            <div>
-              <h3>Send a short message with one helpful idea</h3>
-              <p>Start with what you noticed. Do not start with a big pitch.</p>
-              <ul>
-                <li>Keep it short.</li>
-                <li>Make it specific to their profile, post, or page.</li>
-                <li>Ask if they want a quick example.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="guide-step">
-            <div class="guide-step-num">Step<br>7</div>
-            <div>
-              <h3>Track replies and improve one thing</h3>
-              <p>Do not judge everything from one message. Track your numbers weekly.</p>
-              <ul>
-                <li>Profiles saved</li>
-                <li>Useful comments</li>
-                <li>Messages sent</li>
-                <li>Replies</li>
-                <li>Calls booked</li>
-              </ul>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="scripts" class="section">
+    <section id="day-2" class="guide-section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Message scripts</div>
-            <h2>Use these as a base. Make every message personal.</h2>
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>2</div>
+            <div>
+              <div class="section-kicker">Target choice</div>
+              <h3>Stop searching for "clients". Pick one type of person.</h3>
+              <p>"Clients" is too broad. Today you choose a clear group so your search, content, and messages become easier.</p>
+            </div>
           </div>
-          <p>Copy the structure, not the exact words. The first line should come from something you actually noticed.</p>
-        </div>
-        <div class="script-grid">
-          <div class="script-card">
-            <h3>Profile clarity message</h3>
-            <p>Hey [Name], I checked your profile after seeing your post about [topic].
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>Pick one group for this week</h4>
+              <ul>
+                <li>Coaches</li>
+                <li>Consultants</li>
+                <li>Agency owners</li>
+                <li>SaaS founders</li>
+                <li>Ecommerce founders</li>
+                <li>Course creators</li>
+                <li>Local business owners</li>
+              </ul>
+              <p>Do not worry about choosing forever. You are choosing for this guide.</p>
+            </div>
+            <div class="mini-card">
+              <h4>Write your hunting sentence</h4>
+              <div class="script-box">I am looking for [client type] who probably need help with [problem I solve].</div>
+              <p>Example: I am looking for coaches who post on LinkedIn but their profile does not clearly explain their offer.</p>
+            </div>
+            <div class="mini-card">
+              <h4>Good fit signs</h4>
+              <ul>
+                <li>They sell a service with decent value.</li>
+                <li>They are active on LinkedIn.</li>
+                <li>Their offer is visible but not clear enough.</li>
+                <li>Your service can improve something they already care about.</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>Bad fit signs</h4>
+              <ul>
+                <li>No clear business or offer.</li>
+                <li>No activity for months.</li>
+                <li>You cannot explain why they need your help.</li>
+                <li>You only picked them because they have a nice title.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day-3" class="guide-section">
+      <div class="container">
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>3</div>
+            <div>
+              <div class="section-kicker">Search system</div>
+              <h3>Search LinkedIn with words people actually use.</h3>
+              <p>Today you find possible prospects. You are not messaging yet. You are only searching and collecting useful signals.</p>
+            </div>
+          </div>
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>Search phrases to try</h4>
+              <div class="script-box">"coach" "launching"
+"consultant" "helping"
+"agency owner" "looking for"
+"founder" "building"
+"creator" "new offer"
+"SaaS founder" "hiring"
+"ecommerce founder" "scaling"
+"course creator" "webinar"</div>
+            </div>
+            <div class="mini-card">
+              <h4>Signals to look for</h4>
+              <ul>
+                <li>They are launching something.</li>
+                <li>They changed their offer recently.</li>
+                <li>They post a lot but the next step is unclear.</li>
+                <li>Their profile does not match the service they sell.</li>
+                <li>Their banner, headline, or content can be improved.</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>Do this today</h4>
+              <ol>
+                <li>Search 5 phrases.</li>
+                <li>Open 30 profiles.</li>
+                <li>Save 15 possible prospects.</li>
+                <li>Write one reason for each saved prospect.</li>
+              </ol>
+            </div>
+            <div class="mini-card">
+              <h4>Simple score</h4>
+              <ul>
+                <li>1 = weak fit</li>
+                <li>2 = possible fit</li>
+                <li>3 = strong fit</li>
+              </ul>
+              <p>Only warm up and message 2s and 3s. Do not waste time on weak fits.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day-4" class="guide-section">
+      <div class="container">
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>4</div>
+            <div>
+              <div class="section-kicker">Tracking sheet</div>
+              <h3>Build the sheet that keeps you from getting lost.</h3>
+              <p>If you do not track, you will forget who you messaged, what you noticed, and when to follow up.</p>
+            </div>
+          </div>
+          <div class="worksheet">
+            <div>Name</div>
+            <div>Profile link</div>
+            <div>Client type</div>
+            <div>Signal found</div>
+            <div>Recent post</div>
+            <div>Message angle</div>
+            <div>Status</div>
+            <div>Next follow-up date</div>
+          </div>
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>Status labels</h4>
+              <ul>
+                <li>Saved</li>
+                <li>Commented</li>
+                <li>DM sent</li>
+                <li>Replied</li>
+                <li>Follow-up needed</li>
+                <li>Call booked</li>
+                <li>Not a fit</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>What to write in message angle</h4>
+              <p>Write one specific observation.</p>
+              <div class="script-box">Example: Posts are useful, but profile headline does not say who they help.
+
+Example: Banner looks good, but offer is not clear in 5 seconds.
+
+Example: Launching webinar, but CTA is weak.</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day-5" class="guide-section">
+      <div class="container">
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>5</div>
+            <div>
+              <div class="section-kicker">Warm-up and DM</div>
+              <h3>Start conversations like a normal human.</h3>
+              <p>Do not pitch first. First, show that you looked. Then offer one useful idea.</p>
+            </div>
+          </div>
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>Warm-up comment formula</h4>
+              <div class="script-box">Point they made + your useful addition + simple ending.</div>
+              <p>Example: This is a strong point. A lot of freelancers try to fix content before fixing the profile, but the profile is what people check after the post.</p>
+            </div>
+            <div class="mini-card">
+              <h4>First DM formula</h4>
+              <div class="script-box">Hey [Name], I noticed [specific thing].
+
+Small suggestion: [useful idea].
+
+Want me to send a quick example?</div>
+            </div>
+            <div class="mini-card" id="scripts">
+              <h4>Profile clarity message</h4>
+              <div class="script-box">Hey [Name], I checked your profile after seeing your post about [topic].
 
 Your content is clear, but your headline does not quickly say who you help and what result you create.
 
 Small suggestion: make the first line more outcome-based.
 
-Want me to send a quick example?</p>
-          </div>
-          <div class="script-card">
-            <h3>Design/profile message</h3>
-            <p>Hey [Name], your offer looks strong.
+Want me to send a quick example?</div>
+            </div>
+            <div class="mini-card">
+              <h4>Design/profile message</h4>
+              <div class="script-box">Hey [Name], your offer looks strong.
 
 One thing I noticed: the banner and featured section do not feel as clear as the service you are selling.
 
 Small suggestion: make the banner explain the offer in one line.
 
-Want me to share a quick layout idea?</p>
+Want me to share a quick layout idea?</div>
+            </div>
           </div>
-          <div class="script-card">
-            <h3>Content message</h3>
-            <p>Hey [Name], I noticed your posts are getting engagement.
+        </article>
+      </div>
+    </section>
 
-Small thing: most posts end without a clear next step.
-
-A soft CTA could help interested people know what to do next.
-
-Want me to send 2 CTA examples?</p>
+    <section id="day-6" class="guide-section">
+      <div class="container">
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>6</div>
+            <div>
+              <div class="section-kicker">Follow-up</div>
+              <h3>Follow up without sounding needy.</h3>
+              <p>People are busy. A follow-up is normal. The problem is when your follow-up has no value.</p>
+            </div>
           </div>
-          <div class="script-card">
-            <h3>Follow-up message</h3>
-            <p>Hey [Name], quick example of what I meant:
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>Wait time</h4>
+              <p>Wait 2 to 3 days after the first message. Then send a useful example, not just "following up".</p>
+            </div>
+            <div class="mini-card">
+              <h4>Follow-up script</h4>
+              <div class="script-box">Hey [Name], quick example of what I meant:
 
 Instead of saying "I help businesses grow online", you could say:
 
 "I help [client type] get [specific result] with [service]."
 
-No pressure, just thought it may help.</p>
+No pressure, just thought it may help.</div>
+            </div>
+            <div class="mini-card">
+              <h4>If they reply "thanks"</h4>
+              <div class="script-box">Glad it helped.
+
+Are you trying to get more client conversations from LinkedIn right now, or is LinkedIn more for visibility for you?</div>
+            </div>
+            <div class="mini-card">
+              <h4>If they are interested</h4>
+              <div class="script-box">Makes sense. If you want, I can take a quick look and point out the 2-3 things I would fix first.
+
+If it looks useful after that, we can talk about whether it makes sense to work together.</div>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="section">
+    <section id="day-7" class="guide-section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Daily routine</div>
-            <h2>Do this for 45 minutes a day.</h2>
+        <article class="lesson">
+          <div class="lesson-head">
+            <div class="day-badge">Day<br>7</div>
+            <div>
+              <div class="section-kicker">Calls and routine</div>
+              <h3>Turn replies into calls and keep the system going.</h3>
+              <p>Do not suggest a call just because someone replied. Suggest it when there is a real problem and they show interest.</p>
+            </div>
           </div>
-          <p>This is enough to start. Keep it simple and repeat it.</p>
+          <div class="lesson-grid">
+            <div class="mini-card">
+              <h4>When to invite to a call</h4>
+              <ul>
+                <li>They ask how you would fix it.</li>
+                <li>They say they are working on this problem.</li>
+                <li>They ask what you do.</li>
+                <li>They share details about their situation.</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>Call invite script</h4>
+              <div class="script-box">From what you shared, I think the first things to look at are:
+1. [specific issue]
+2. [specific issue]
+3. [specific issue]
+
+If you want, we can do a short call and I can show you what I would fix first. If it feels useful, we can talk about next steps.</div>
+            </div>
+            <div class="mini-card">
+              <h4>45-minute daily routine</h4>
+              <ul>
+                <li>10 min: search for prospects</li>
+                <li>10 min: check signals</li>
+                <li>10 min: leave useful comments</li>
+                <li>10 min: send 3 to 5 DMs</li>
+                <li>5 min: update your sheet</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>Weekly review</h4>
+              <ul>
+                <li>If nobody replies, fix targeting or first message.</li>
+                <li>If replies come but no calls, improve your questions.</li>
+                <li>If calls happen but no clients, improve your offer and sales conversation.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <div class="container">
+        <div class="section-kicker">Avoid these mistakes</div>
+        <h2>Small mistakes that make good freelancers look spammy.</h2>
+        <div class="mistake-list">
+          <article class="card"><div class="icon">01</div><h3>Messaging too fast</h3><p>If you did not check their profile or content, your message will sound random.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Pitching too early</h3><p>First start a useful conversation. Then move toward a call when there is interest.</p></article>
+          <article class="card"><div class="icon">03</div><h3>No tracking sheet</h3><p>If you do not track, you will forget follow-ups and repeat the same mistakes.</p></article>
         </div>
-        <div class="tracker">
-          <article class="card">
-            <div class="icon">15</div>
-            <h3>Find people</h3>
-            <ul>
-              <li>Search one client type</li>
-              <li>Save 5 good profiles</li>
-              <li>Write one reason for each</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="icon">15</div>
-            <h3>Warm up</h3>
-            <ul>
-              <li>Read recent posts</li>
-              <li>Leave useful comments</li>
-              <li>Do not spam likes</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="icon">15</div>
-            <h3>Message and track</h3>
-            <ul>
-              <li>Send 3 to 5 DMs</li>
-              <li>Follow up with value</li>
-              <li>Update your sheet</li>
-            </ul>
-          </article>
+        <div class="premium-note">
+          <div class="section-kicker">How to use this guide</div>
+          <p>Do not read all of this and do nothing. Pick Day 1, finish the action, then move to Day 2 tomorrow. This works because it is simple and repeatable, not because it is fancy.</p>
         </div>
       </div>
     </section>
 
-    <section id="session" class="section section-sm">
-      <div class="container guide-note">
-        <div class="section-kicker">Need help doing this?</div>
-        <h2>Book a paid 1:1 session and we can fix your client hunting system together.</h2>
-        <p>If you want direct help, I can review your LinkedIn profile, target audience, offer, content direction, and outreach messages with you on Google Meet.</p>
+    <section id="session" class="guide-section">
+      <div class="container final-cta">
+        <div>
+          <div class="section-kicker">Need help implementing it?</div>
+          <h2>Book a paid 1:1 session and we can fix your client hunting system together.</h2>
+          <p>If you want direct help, I can review your LinkedIn profile, target audience, offer, content direction, prospect sheet, DM scripts, and follow-up plan with you on Google Meet.</p>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="http://calendly.com/thecreativenaeem/60min">Book Paid 1:1 Session</a>
           <a class="btn btn-secondary" href="contact.html">Ask a question</a>

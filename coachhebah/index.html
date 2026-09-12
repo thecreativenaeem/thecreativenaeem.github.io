@@ -1,0 +1,3272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#310642">
+    <link rel="icon" href="data:,">
+    <title>StrongerHer — Summer Bootcamp for Muslim Women</title>
+    <meta name="description"
+      content="A 6-week live fitness, nutrition and lifestyle bootcamp designed for busy Muslim women. Coached by Hebah.">
+    <style>
+      @font-face {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(assets/kJEnBuEW6A0lliaV_m88ja5Twtx8BWhtkDVmjZvM_oTpBA.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(assets/kJEnBuEW6A0lliaV_m88ja5Twtx8BWhtkDVmjZvMzITpBA.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(assets/kJEnBuEW6A0lliaV_m88ja5Twtx8BWhtkDVmjZvMIIPpBA.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(assets/kJEnBuEW6A0lliaV_m88ja5Twtx8BWhtkDVmjZvMGYPpBA.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(assets/kJEnBuEW6A0lliaV_m88ja5Twtx8BWhtkDVmjZvMfoPpBA.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(assets/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_F.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(assets/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFO_F.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(assets/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE-_F.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(assets/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_F.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(assets/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E-_F.ttf) format('truetype');
+      }
+
+      :root {
+        --cream: oklch(97.5% .012 75);
+        --ink: oklch(22% .04 310);
+        --purple: oklch(32% .13 315);
+        --deep: oklch(24% .11 315);
+        --soft: oklch(55% .14 318);
+        --muted: oklch(45% .03 310);
+        --lilac: oklch(95% .02 320);
+        --accent: oklch(93% .04 325);
+        --gold: oklch(78% .11 80);
+        --blush: oklch(88% .05 20);
+        --border: oklch(90% .015 320);
+        --body: 'Manrope', sans-serif;
+        --display: 'League Spartan', sans-serif
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px
+      }
+
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font: 15px/1.8 var(--body);
+        -webkit-font-smoothing: antialiased
+      }
+
+      body.modal-open {
+        overflow: hidden
+      }
+
+      img {
+        display: block;
+        max-width: 100%
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none
+      }
+
+      button,
+      input {
+        font: inherit
+      }
+
+      button,
+      a,
+      input,
+      summary {
+        -webkit-tap-highlight-color: transparent
+      }
+
+      button {
+        cursor: pointer
+      }
+
+      button svg,
+      a svg {
+        flex-shrink: 0
+      }
+
+      svg {
+        width: 24px;
+        height: 24px
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      figure {
+        margin: 0
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        color: var(--deep);
+        font-weight: 600;
+        line-height: 1.06;
+        letter-spacing: -.035em
+      }
+
+      h2 {
+        font-size: clamp(38px, 4vw, 56px)
+      }
+
+      h3 {
+        font-size: 29px;
+        line-height: 1.14;
+        letter-spacing: -.025em
+      }
+
+      p {
+        color: var(--muted)
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--soft);
+        outline-offset: 5px
+      }
+
+      .wrap {
+        width: min(1200px, calc(100% - 96px));
+        margin-inline: auto
+      }
+
+      .section {
+        padding-block: 100px
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .17em;
+        line-height: 1.7;
+        color: var(--purple);
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 12px
+      }
+
+      .eyebrow svg {
+        width: 22px;
+        height: 22px
+      }
+
+      .button {
+        min-height: 56px;
+        padding: 15px 25px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        background: var(--purple);
+        color: var(--cream);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: .025em;
+        line-height: 1.4;
+        box-shadow: 0 5px 0 color-mix(in srgb, var(--deep) 10%, transparent)
+      }
+
+      .button svg {
+        width: 21px;
+        height: 21px
+      }
+
+      .button:hover {
+        background: var(--deep)
+      }
+
+      .button-light {
+        background: var(--cream);
+        color: var(--deep);
+        box-shadow: none
+      }
+
+      .button-light:hover {
+        background: var(--accent)
+      }
+
+      .button-gold {
+        background: var(--gold);
+        color: var(--deep);
+        box-shadow: none
+      }
+
+      .button-gold:hover {
+        background: var(--accent)
+      }
+
+      .microcopy {
+        font-size: 11px;
+        line-height: 1.6
+      }
+
+      .tiny-line {
+        width: 27px;
+        height: 2px;
+        background: var(--gold)
+      }
+
+      .site-header {
+        border-bottom: 1px solid var(--border);
+        background: var(--cream)
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        min-height: 90px
+      }
+
+      .logo {
+        width: 186px;
+        height: auto
+      }
+
+      .header-inner nav {
+        display: flex;
+        align-items: center;
+        gap: 28px
+      }
+
+      .header-inner nav a {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: .09em;
+        min-height: 44px;
+        display: flex;
+        align-items: center
+      }
+
+      .header-inner nav a:hover {
+        color: var(--soft)
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 13px
+      }
+
+      .social {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center
+      }
+
+      .social svg {
+        width: 18px;
+        height: 18px
+      }
+
+      .language {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 44px;
+        font-size: 14px;
+        font-weight: 700;
+        border-inline-start: 1px solid var(--border);
+        padding-inline-start: 17px
+      }
+
+      .home {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        min-height: 44px
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.08fr .92fr;
+        column-gap: 56px;
+        padding-top: 65px
+      }
+
+      .hero-copy {
+        padding-top: 14px
+      }
+
+      .hero h1 {
+        font-size: clamp(58px, 5.5vw, 78px);
+        line-height: .99;
+        letter-spacing: -.045em;
+        margin-top: 23px;
+        font-weight: 600
+      }
+
+      .hero-emphasis {
+        display: block;
+        color: var(--soft);
+        margin-top: 9px
+      }
+
+      .hero-lead {
+        max-width: 510px;
+        font-size: 15px;
+        line-height: 1.85;
+        margin-top: 24px
+      }
+
+      .hero-action {
+        margin-top: 27px
+      }
+
+      .availability {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 9px;
+        letter-spacing: .085em;
+        color: var(--purple);
+        font-weight: 800;
+        line-height: 1.65;
+        max-width: 470px
+      }
+
+      .availability>span {
+        width: 6px;
+        height: 6px;
+        flex: 0 0 6px;
+        background: var(--gold);
+        border-radius: 50%
+      }
+
+      .hero-action .button {
+        margin-top: 15px;
+        min-width: 240px
+      }
+
+      .hero-action .microcopy {
+        margin-top: 12px
+      }
+
+      .hero-visual {
+        position: relative;
+        min-width: 0;
+        height: 579px;
+        align-self: end;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 15px 61px
+      }
+
+      .portrait-backdrop {
+        position: absolute;
+        inset: 0 0 50px;
+        background: var(--accent);
+        border-radius: 210px 210px 10px 10px;
+        overflow: hidden
+      }
+
+      .portrait-backdrop:after {
+        content: '';
+        position: absolute;
+        inset: 15px;
+        border: 1px solid color-mix(in srgb, var(--purple) 17%, transparent);
+        border-radius: 200px 200px 4px 4px
+      }
+
+      .orbit {
+        width: 360px;
+        height: 360px;
+        border: 1px solid color-mix(in srgb, var(--purple) 15%, transparent);
+        border-radius: 50%;
+        position: absolute;
+        top: 140px;
+        left: 60px
+      }
+
+      .outline-word {
+        position: absolute;
+        bottom: 25px;
+        left: -8px;
+        white-space: nowrap;
+        font: 700 91px/1 var(--display);
+        letter-spacing: -.045em;
+        color: transparent;
+        -webkit-text-stroke: 1px color-mix(in srgb, var(--purple) 16%, transparent)
+      }
+
+      .hero-person {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 530px;
+        object-fit: contain;
+        object-position: bottom
+      }
+
+      .portrait-caption {
+        position: absolute;
+        z-index: 2;
+        bottom: 15px;
+        left: -22px;
+        right: 22px;
+        background: var(--deep);
+        padding: 21px 26px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        border-radius: 6px
+      }
+
+      .caption-mark {
+        font-size: 33px;
+        color: var(--gold)
+      }
+
+      .portrait-caption p {
+        color: var(--cream);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.6;
+        max-width: 300px
+      }
+
+      .hero-note {
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: .75fr 1.25fr;
+        align-items: center;
+        gap: 60px;
+        border-top: 1px solid var(--border);
+        margin-top: 35px;
+        padding-block: 29px 38px
+      }
+
+      .hero-note-title {
+        font: 500 25px/1.2 var(--display);
+        color: var(--deep)
+      }
+
+      .hero-note>p:last-child {
+        font-size: 12px;
+        line-height: 1.9;
+        max-width: 600px
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 36px
+      }
+
+      .section-heading .eyebrow {
+        margin-bottom: 19px
+      }
+
+      .section-subtitle {
+        margin-top: 12px;
+        font-size: 14px
+      }
+
+      .system-section {
+        background: var(--lilac);
+        border-block: 1px solid var(--border);
+        padding-block: 65px
+      }
+
+      .system-heading {
+        align-items: center
+      }
+
+      .system-heading h2 {
+        font-size: 53px
+      }
+
+      .system-lead {
+        font: 500 24px/1.4 var(--display);
+        max-width: 440px;
+        color: var(--purple)
+      }
+
+      .system-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 65px;
+        align-items: center
+      }
+
+      .system-intro>p {
+        font-size: 13px;
+        line-height: 1.85
+      }
+
+      .pillar-index {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px
+      }
+
+      .pillar-index a {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 16px 16px 14px;
+        border: 1px solid color-mix(in srgb, var(--purple) 18%, transparent);
+        background: color-mix(in srgb, var(--purple) 100%, transparent);
+        border-radius: 5px;
+        color: var(--cream)
+      }
+
+      .pillar-index a>svg:first-child {
+        width: 40px;
+        height: 40px;
+        /* flex-basis: 100%; */
+        margin-right: auto
+      }
+
+      .pillar-index span {
+        font-size: 14px;
+        letter-spacing: .1em;
+        font-weight: 800
+      }
+
+      .pillar-index a>svg:last-child {
+        width: 16px;
+        height: 16px;
+        margin-left: auto
+      }
+
+      .pillar-index a:hover {
+        background: color-mix(in srgb, var(--purple) 80%, transparent);
+      }
+
+      .method-row {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 85px;
+        align-items: center
+      }
+
+      .editorial-photo {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px
+      }
+
+      .editorial-photo>img {
+        width: 100%;
+        aspect-ratio: 4/5;
+        object-fit: cover
+      }
+
+      .photo-corner {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        background: var(--cream);
+        padding: 9px 15px;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: .12em;
+        border-radius: 3px
+      }
+
+      .method-copy .eyebrow {
+        margin-bottom: 22px
+      }
+
+      .method-copy h2 {
+        font-size: 49px;
+        max-width: 510px
+      }
+
+      .method-callout {
+        border-left: 2px solid var(--gold);
+        padding-left: 20px;
+        font-weight: 700;
+        color: var(--purple);
+        font-size: 15px;
+        line-height: 1.75;
+        margin: 24px 0
+      }
+
+      .prose p+p {
+        margin-top: 17px
+      }
+
+      .prose {
+        font-size: 14px;
+        line-height: 1.9
+      }
+
+      .fast-panel {
+        margin-block: 75px;
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: .85fr 1.15fr;
+        gap: 75px;
+        padding: 45px 48px;
+        background: var(--lilac);
+        border: 1px solid var(--border);
+        border-radius: 8px
+      }
+
+      .fast-title,
+      .fast-panel .prose {
+        position: relative;
+        z-index: 1
+      }
+
+      .fast-title h2 {
+        font-size: 40px;
+        margin-top: 20px
+      }
+
+      .fast-panel .prose {
+        align-self: center
+      }
+
+      .moon-decoration {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        box-shadow: -25px 20px 0 color-mix(in srgb, var(--soft) 5%, transparent);
+        position: absolute;
+        right: -35px;
+        top: -50px
+      }
+
+      .eat-row {
+        grid-template-columns: 1.1fr .9fr
+      }
+
+      .eat-row .editorial-photo>img {
+        aspect-ratio: 1.14;
+        object-position: center 20%
+      }
+
+      .life-banner {
+        background: var(--deep);
+        padding-block: 48px
+      }
+
+      .life-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        gap: 36px;
+        align-items: center
+      }
+
+      .life-inner h2 {
+        color: var(--cream);
+        font-size: 40px;
+        max-width: 300px
+      }
+
+      .life-inner p {
+        color: var(--cream);
+        opacity: .8;
+        font-size: 12px
+      }
+
+      .life-inner p+p {
+        margin-top: 5px
+      }
+
+      .life-inner .button {
+        gap: 18px
+      }
+
+      .stories-section {
+        background: var(--cream)
+      }
+
+      .rail-controls {
+        display: flex;
+        gap: 8px
+      }
+
+      .round-button {
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--purple);
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        padding: 0
+      }
+
+      .round-button:hover {
+        background: var(--lilac)
+      }
+
+      .round-button:disabled {
+        opacity: .3;
+        cursor: default
+      }
+
+      .round-button[data-direction="-1"] svg {
+        transform: rotate(180deg)
+      }
+
+      .round-button svg {
+        width: 20px;
+        height: 20px
+      }
+
+      .story-rail {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) transparent;
+        padding-bottom: 20px;
+        overscroll-behavior-x: contain
+      }
+
+      .story-card {
+        flex: 0 0 calc((100% - 40px)/3);
+        min-width: 0;
+        scroll-snap-align: start;
+        padding: 30px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .quote-mark {
+        color: var(--soft);
+        font: 80px/.7 Georgia, serif;
+        height: 40px
+      }
+
+      .story-card h3 {
+        font-size: 26px;
+        line-height: 1.17;
+        min-height: 60px;
+        margin-top: 12px
+      }
+
+      .story-excerpt {
+        font-size: 13px;
+        line-height: 1.85;
+        margin-top: 16px;
+        margin-bottom: 28px
+      }
+
+      .story-person {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: auto
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--lilac);
+        color: var(--purple);
+        font: 600 18px/1 var(--display)
+      }
+
+      .story-person p {
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--deep)
+      }
+
+      .story-person div>span {
+        font-size: 10px;
+        color: var(--muted)
+      }
+
+      .text-button {
+        padding: 12px 0 0;
+        background: none;
+        border: 0;
+        color: var(--purple);
+        font-size: 11px;
+        font-weight: 800;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        min-height: 44px;
+        margin-top: 9px
+      }
+
+      .community-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 63px;
+        margin-bottom: 25px
+      }
+
+      .community-heading h3 {
+        font-size: 32px
+      }
+
+      .community-rail {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) transparent;
+        align-items: flex-start;
+        padding-bottom: 17px
+      }
+
+      .community-shot {
+        flex: 0 0 calc((100% - 72px)/5);
+        min-width: 0;
+        scroll-snap-align: start;
+        padding: 5px;
+        background: var(--deep);
+        border-radius: 14px;
+        overflow: hidden
+      }
+
+      .community-shot img {
+        width: 100%;
+        height: auto;
+        border-radius: 9px
+      }
+
+      .coached-section {
+        background: var(--lilac);
+        border-block: 1px solid var(--border)
+      }
+
+      .coached-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 90px;
+        align-items: start
+      }
+
+      .coached-intro {
+        position: sticky;
+        top: 60px
+      }
+
+      .coached-intro h2 {
+        margin-top: 20px;
+        font-size: 58px
+      }
+
+      .coached-intro .prose {
+        margin-top: 27px
+      }
+
+      .coached-intro .button {
+        margin-top: 32px
+      }
+
+      .coaching-features {
+        display: grid;
+        gap: 22px
+      }
+
+      .qa-card {
+        padding: 33px;
+        border: 1px solid var(--border);
+        background: var(--cream);
+        border-radius: 8px
+      }
+
+      .feature-icon {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        background: var(--accent);
+        color: var(--purple);
+        border-radius: 8px;
+        margin-bottom: 23px
+      }
+
+      .qa-card p {
+        font-size: 13px;
+        line-height: 1.85;
+        margin-top: 15px
+      }
+
+      .bonus-card {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        background: white
+      }
+
+      .bonus-card>img {
+        width: 100%;
+        aspect-ratio: 2.2;
+        object-fit: cover
+      }
+
+      .bonus-copy {
+        padding: 28px 33px 32px
+      }
+
+      .gold-label {
+        font-size: 9px;
+        color: var(--deep);
+        display: inline-flex;
+        background: var(--gold);
+        padding: 3px 9px;
+        border-radius: 2px;
+        letter-spacing: .12em
+      }
+
+      .bonus-copy h3 {
+        margin-top: 13px
+      }
+
+      .bonus-copy p:not(.eyebrow) {
+        font-size: 13px;
+        margin-top: 13px;
+        line-height: 1.85
+      }
+
+      .bonus-copy .bonus-lead {
+        font-weight: 700;
+        color: var(--purple)
+      }
+
+      .coach-heading {
+        display: block;
+        max-width: 800px;
+        margin-bottom: 48px
+      }
+
+      .coach-heading h2 {
+        font-size: 59px
+      }
+
+      .coach-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 75px;
+        align-items: center
+      }
+
+      .journey-label {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 12px
+      }
+
+      .journey-label span {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 10px;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: .14em;
+        color: var(--purple)
+      }
+
+      .journey-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 15px
+      }
+
+      .journey-photo img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        object-position: center 30%;
+        border-radius: 6px
+      }
+
+      .journey-photo figcaption {
+        font-size: 10px;
+        line-height: 1.6;
+        padding-top: 9px;
+        color: var(--muted)
+      }
+
+      .journey-claim {
+        margin-top: 22px;
+        background: var(--gold);
+        padding: 10px 16px;
+        border-radius: 4px;
+        color: var(--deep);
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center
+      }
+
+      .coach-story p:first-child {
+        font: 500 26px/1.3 var(--display);
+        color: var(--deep);
+        margin-bottom: 23px
+      }
+
+      .coach-story p:last-child {
+        color: var(--purple);
+        font-weight: 700;
+        border-left: 2px solid var(--gold);
+        padding-left: 18px;
+        margin-top: 24px
+      }
+
+      .fit-section {
+        background: var(--lilac);
+        border-block: 1px solid var(--border)
+      }
+
+      .for-you {
+        text-align: center;
+        max-width: 750px;
+        margin: 0 auto 55px
+      }
+
+      .for-you .eyebrow {
+        justify-content: center
+      }
+
+      .for-you h2 {
+        margin-top: 18px;
+        font-size: 54px
+      }
+
+      .for-you p:not(.eyebrow) {
+        margin-top: 18px;
+        font-size: 14px
+      }
+
+      .for-you p:last-child {
+        margin-top: 6px
+      }
+
+      .privacy-panel {
+        display: grid;
+        grid-template-columns: .95fr 1.05fr;
+        background: var(--deep);
+        border-radius: 10px;
+        overflow: hidden
+      }
+
+      .privacy-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 510px
+      }
+
+      .privacy-copy {
+        padding: 55px 50px;
+        align-self: center
+      }
+
+      .privacy-copy .eyebrow {
+        color: var(--gold)
+      }
+
+      .privacy-copy h2 {
+        color: var(--cream);
+        font-size: 52px;
+        margin-top: 20px
+      }
+
+      .privacy-copy p:not(.eyebrow) {
+        color: var(--cream);
+        opacity: .8;
+        margin-top: 20px;
+        font-size: 13px
+      }
+
+      .privacy-copy .button {
+        margin-top: 29px
+      }
+
+      .faq-section {
+        display: grid;
+        grid-template-columns: .8fr 1.2fr;
+        gap: 85px;
+        align-items: start
+      }
+
+      .faq-heading {
+        position: sticky;
+        top: 60px
+      }
+
+      .faq-heading h2 {
+        max-width: 340px;
+        font-size: 58px
+      }
+
+      .contact-text {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--purple);
+        min-height: 48px;
+        margin-top: 22px;
+        flex-wrap: wrap
+      }
+
+      .contact-text svg {
+        width: 18px;
+        height: 18px
+      }
+
+      .faqs details {
+        border-bottom: 1px solid var(--border)
+      }
+
+      .faqs details:first-child {
+        border-top: 1px solid var(--border)
+      }
+
+      summary {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        padding-block: 22px;
+        cursor: pointer;
+        color: var(--deep);
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 1.6
+      }
+
+      summary::-webkit-details-marker {
+        display: none
+      }
+
+      .plus {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        flex: 0 0 20px
+      }
+
+      .plus:before,
+      .plus:after {
+        content: '';
+        position: absolute;
+        background: var(--purple);
+        left: 4px;
+        top: 9px;
+        width: 12px;
+        height: 1px
+      }
+
+      .plus:after {
+        transform: rotate(90deg)
+      }
+
+      details[open] .plus:after {
+        display: none
+      }
+
+      .faq-answer {
+        font-size: 13px;
+        line-height: 1.85;
+        padding: 0 35px 23px 0
+      }
+
+      .faq-answer p+p {
+        margin-top: 14px
+      }
+
+      .waitlist-section {
+        padding-block: 75px;
+        background: var(--accent);
+        border-block: 1px solid var(--border)
+      }
+
+      .waitlist-grid {
+        display: grid;
+        grid-template-columns: 1.05fr .95fr;
+        gap: 100px;
+        align-items: center
+      }
+
+      .waitlist-section h2 {
+        font-size: 59px;
+        margin-top: 20px;
+        max-width: 570px
+      }
+
+      .waitlist-intro {
+        margin-top: 21px;
+        font-size: 14px;
+        max-width: 430px
+      }
+
+      .signup-card {
+        padding: 33px;
+        background: var(--cream);
+        border: 1px solid color-mix(in srgb, var(--purple) 15%, transparent);
+        border-radius: 8px;
+        box-shadow: 0 12px 30px color-mix(in srgb, var(--purple) 5%, transparent)
+      }
+
+      form label {
+        display: block;
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 9px
+      }
+
+      form input[type=email] {
+        width: 100%;
+        min-height: 56px;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        background: white;
+        padding: 13px 16px;
+        color: var(--deep);
+        font-size: 16px
+      }
+
+      form .button {
+        width: 100%;
+        margin-top: 13px
+      }
+
+      .signup-card .microcopy {
+        text-align: center;
+        margin-top: 15px
+      }
+
+      footer {
+        padding-block: 32px
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px
+      }
+
+      .footer-logo {
+        width: 130px;
+        height: 42px;
+        object-fit: contain
+      }
+
+      .footer-inner p {
+        font-size: 10px
+      }
+
+      .footer-inner>a:last-child {
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        min-height: 44px
+      }
+
+      .footer-inner>a:last-child svg {
+        width: 17px;
+        height: 17px
+      }
+
+      .mobile-cta {
+        display: none
+      }
+
+      dialog {
+        width: min(640px, calc(100% - 32px));
+        max-height: 85dvh;
+        padding: 43px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--cream);
+        color: var(--ink);
+        box-shadow: 0 25px 100px #1f012d33
+      }
+
+      dialog::backdrop {
+        background: #1f012daa;
+        backdrop-filter: blur(5px)
+      }
+
+      dialog .eyebrow {
+        padding-right: 40px
+      }
+
+      dialog h2 {
+        font-size: 36px;
+        margin-top: 15px
+      }
+
+      dialog #story-badge {
+        display: inline-block;
+        font-size: 12px;
+        color: var(--purple);
+        background: var(--accent);
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-top: 15px
+      }
+
+      dialog .prose {
+        margin-top: 25px
+      }
+
+      .dialog-close {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        font-size: 28px
+      }
+
+      .dialog-close:hover {
+        background: var(--accent)
+      }
+
+      [hidden] {
+        display: none !important
+      }
+
+      @media(min-width:1500px) {
+        .hero {
+          padding-top: 75px
+        }
+
+        .hero-visual {
+          height: 605px
+        }
+
+        .hero-person {
+          height: 555px
+        }
+
+        .hero h1 {
+          font-size: 83px
+        }
+      }
+
+      @media(max-width:1100px) {
+        .wrap {
+          width: calc(100% - 64px)
+        }
+
+        .header-inner {
+          gap: 20px
+        }
+
+        .header-inner nav {
+          gap: 18px
+        }
+
+        .home {
+          display: none
+        }
+
+        .hero {
+          column-gap: 30px
+        }
+
+        .hero h1 {
+          font-size: 61px
+        }
+
+        .hero-visual {
+          height: 552px
+        }
+
+        .hero-person {
+          height: 490px
+        }
+
+        .hero-lead {
+          font-size: 14px
+        }
+
+        .portrait-caption {
+          left: -10px;
+          right: 8px;
+          padding: 18px
+        }
+
+        .hero-note {
+          gap: 35px
+        }
+
+        .method-row {
+          gap: 45px
+        }
+
+        .method-copy h2 {
+          font-size: 43px
+        }
+
+        .system-intro {
+          gap: 35px
+        }
+
+        .system-lead {
+          max-width: 350px
+        }
+
+        .fast-panel {
+          gap: 40px;
+          padding: 36px
+        }
+
+        .coached-grid {
+          gap: 50px
+        }
+
+        .coached-intro h2 {
+          font-size: 49px
+        }
+
+        .coach-grid {
+          gap: 45px
+        }
+
+        .life-inner {
+          grid-template-columns: 1fr 1fr
+        }
+
+        .life-inner .button {
+          grid-column: 2;
+          justify-self: start
+        }
+
+        .life-inner h2 {
+          grid-row: span 2
+        }
+
+        .story-card {
+          padding: 24px
+        }
+
+        .privacy-copy {
+          padding: 40px 32px
+        }
+
+        .privacy-copy h2 {
+          font-size: 43px
+        }
+
+        .faq-section {
+          gap: 50px
+        }
+
+        .faq-heading h2 {
+          font-size: 47px
+        }
+
+        .waitlist-grid {
+          gap: 50px
+        }
+
+        .waitlist-section h2 {
+          font-size: 49px
+        }
+
+        .signup-card {
+          padding: 27px
+        }
+      }
+
+      @media(max-width:800px) {
+        html {
+          scroll-padding-top: 30px
+        }
+
+        .wrap {
+          width: calc(100% - 40px)
+        }
+
+        .section {
+          padding-block: 65px
+        }
+
+        .header-inner {
+          min-height: 76px
+        }
+
+        .header-inner nav {
+          display: none
+        }
+
+        .logo {
+          width: 165px
+        }
+
+        .hero {
+          padding-top: 38px;
+          gap: 30px;
+          grid-template-columns: 1.1fr .9fr
+        }
+
+        .hero h1 {
+          font-size: 48px
+        }
+
+        .hero-lead {
+          font-size: 13px;
+          line-height: 1.8
+        }
+
+        .hero-copy {
+          padding-top: 0
+        }
+
+        .hero-visual {
+          height: 450px;
+          align-self: center
+        }
+
+        .hero-person {
+          height: 385px;
+          max-width: none;
+          width: 120%
+        }
+
+        .hero .eyebrow {
+          font-size: 9px
+        }
+
+        .portrait-caption {
+          left: -8px;
+          right: 0;
+          bottom: 20px;
+          padding: 15px;
+          gap: 10px
+        }
+
+        .portrait-caption p {
+          font-size: 10px
+        }
+
+        .caption-mark {
+          font-size: 25px
+        }
+
+        .portrait-backdrop {
+          bottom: 50px
+        }
+
+        .outline-word {
+          font-size: 64px
+        }
+
+        .hero-action {
+          margin-top: 20px
+        }
+
+        .availability {
+          font-size: 8px
+        }
+
+        .hero-action .button {
+          min-width: 0;
+          width: 100%;
+          gap: 18px
+        }
+
+        .hero-note {
+          margin-top: 0;
+          gap: 25px;
+          padding-bottom: 26px
+        }
+
+        .hero-note-title {
+          font-size: 23px
+        }
+
+        .hero-note>p:last-child {
+          font-size: 11px
+        }
+
+        .system-heading {
+          display: block
+        }
+
+        .system-heading h2 {
+          font-size: 45px
+        }
+
+        .system-lead {
+          margin-top: 22px;
+          max-width: none;
+          font-size: 24px
+        }
+
+        .system-intro {
+          grid-template-columns: 1fr;
+          gap: 24px
+        }
+
+        .pillar-index a>svg:first-child {
+          flex-basis: auto
+        }
+
+        .system-intro>p {
+          max-width: 620px
+        }
+
+        .method-row {
+          gap: 30px
+        }
+
+        .method-copy h2 {
+          font-size: 36px
+        }
+
+        .method-callout {
+          font-size: 13px;
+          margin: 18px 0
+        }
+
+        .prose {
+          font-size: 13px
+        }
+
+        .method-copy .eyebrow {
+          margin-bottom: 15px
+        }
+
+        .editorial-photo>img {
+          aspect-ratio: 3/5
+        }
+
+        .fast-panel {
+          margin-block: 45px;
+          gap: 26px;
+          padding: 30px
+        }
+
+        .fast-title h2 {
+          font-size: 32px
+        }
+
+        .eat-row .editorial-photo>img {
+          aspect-ratio: 3/4
+        }
+
+        .life-inner {
+          gap: 18px 30px
+        }
+
+        .life-inner h2 {
+          font-size: 36px
+        }
+
+        .story-card {
+          flex-basis: calc((100% - 20px)/2)
+        }
+
+        .community-shot {
+          flex-basis: calc((100% - 36px)/3)
+        }
+
+        .coached-grid {
+          grid-template-columns: 1fr;
+          gap: 35px
+        }
+
+        .coached-intro {
+          position: static
+        }
+
+        .coached-intro h2 {
+          max-width: 570px;
+          font-size: 49px
+        }
+
+        .coached-intro .prose {
+          max-width: 650px
+        }
+
+        .coaching-features {
+          grid-template-columns: 1fr 1fr;
+          align-items: start
+        }
+
+        .qa-card {
+          padding: 25px
+        }
+
+        .bonus-copy {
+          padding: 25px
+        }
+
+        .coaching-features h3 {
+          font-size: 26px
+        }
+
+        .coach-heading h2 {
+          font-size: 48px
+        }
+
+        .coach-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 30px
+        }
+
+        .journey-photo img {
+          height: 180px
+        }
+
+        .coach-story p:first-child {
+          font-size: 23px
+        }
+
+        .privacy-copy h2 {
+          font-size: 37px
+        }
+
+        .privacy-copy {
+          padding: 32px 28px
+        }
+
+        .privacy-image img {
+          min-height: 480px
+        }
+
+        .for-you h2 {
+          font-size: 46px
+        }
+
+        .faq-section {
+          grid-template-columns: 1fr;
+          gap: 30px
+        }
+
+        .faq-heading {
+          position: static
+        }
+
+        .faq-heading h2 {
+          max-width: 500px;
+          font-size: 46px
+        }
+
+        .contact-text {
+          margin-top: 12px
+        }
+
+        .waitlist-grid {
+          gap: 30px
+        }
+
+        .waitlist-section h2 {
+          font-size: 43px
+        }
+
+        .signup-card {
+          padding: 22px
+        }
+
+        .footer-inner {
+          gap: 15px;
+          flex-wrap: wrap
+        }
+
+        .footer-inner p {
+          order: 3;
+          width: 100%;
+          text-align: center
+        }
+
+        .footer-logo {
+          width: 115px
+        }
+      }
+
+      @media(max-width:580px) {
+        .wrap {
+          width: calc(100% - 40px)
+        }
+
+        .header-inner {
+          gap: 8px;
+          min-height: 70px
+        }
+
+        .logo {
+          width: 153px
+        }
+
+        .header-actions {
+          gap: 2px
+        }
+
+        .language {
+          font-size: 13px;
+          padding-inline-start: 10px;
+          gap: 9px
+        }
+
+        .social {
+          width: 36px;
+          height: 44px
+        }
+
+        .social svg {
+          width: 17px;
+          height: 17px
+        }
+
+        .hero {
+          display: flex;
+          flex-direction: column;
+          padding-top: 33px;
+          gap: 0
+        }
+
+        .hero h1 {
+          font-size: clamp(43px, 11.8vw, 64px);
+          margin-top: 21px;
+          line-height: 1.01;
+          letter-spacing: -.035em
+        }
+
+        .hero .eyebrow {
+          font-size: 9px
+        }
+
+        .hero-lead {
+          font-size: 14px;
+          line-height: 1.8;
+          margin-top: 20px
+        }
+
+        .hero-action {
+          margin-top: 23px
+        }
+
+        .availability {
+          font-size: 8px;
+          max-width: 330px;
+          letter-spacing: .07em
+        }
+
+        .hero-action .button {
+          min-height: 56px;
+          width: 100%;
+          margin-top: 13px;
+          justify-content: space-between;
+          padding-inline: 22px
+        }
+
+        .hero-action .microcopy {
+          font-size: 10px;
+          margin-top: 10px
+        }
+
+        .hero-visual {
+          height: 455px;
+          width: 100%;
+          max-width: 390px;
+          align-self: center;
+          margin-top: 33px;
+          padding-bottom: 60px
+        }
+
+        .hero-person {
+          height: 421px;
+          max-width: 100%;
+          width: 100%
+        }
+
+        .portrait-backdrop {
+          inset: 5px 9px 36px;
+          border-radius: 180px 180px 5px 5px
+        }
+
+        .portrait-backdrop:after {
+          border-radius: 170px 170px 3px 3px
+        }
+
+        .portrait-caption {
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 19px 22px;
+          gap: 16px
+        }
+
+        .portrait-caption p {
+          font-size: 13px;
+          max-width: 260px
+        }
+
+        .caption-mark {
+          font-size: 30px
+        }
+
+        .outline-word {
+          font-size: 74px;
+          bottom: 35px
+        }
+
+        .hero-note {
+          display: block;
+          margin-top: 32px;
+          padding-block: 25px 29px
+        }
+
+        .hero-note-title {
+          font-size: 26px;
+          max-width: 290px
+        }
+
+        .hero-note>p:last-child {
+          font-size: 12px;
+          margin-top: 13px;
+          line-height: 1.8
+        }
+
+        .section {
+          padding-block: 54px
+        }
+
+        .section-heading {
+          gap: 20px;
+          align-items: center
+        }
+
+        .section-heading .eyebrow {
+          margin-bottom: 15px
+        }
+
+        .system-heading {
+          display: block;
+          margin-bottom: 25px
+        }
+
+        .system-heading h2 {
+          font-size: 42px
+        }
+
+        .system-lead {
+          font-size: 23px;
+          margin-top: 15px;
+          line-height: 1.35
+        }
+
+        .pillar-index {
+          gap: 9px
+        }
+
+        .pillar-index a {
+          padding: 15px 12px;
+          gap: 13px
+        }
+
+        .pillar-index a>svg:first-child {
+          /* flex-basis: 100%; */
+          margin-right: auto
+        }
+
+        .pillar-index a>span {
+          font-size: 9px
+        }
+
+        .pillar-index a>svg:last-child {
+          width: 14px;
+          height: 14px
+        }
+
+        .system-intro>p {
+          font-size: 13px
+        }
+
+        .method-row {
+          display: flex;
+          flex-direction: column;
+          gap: 27px;
+          align-items: stretch
+        }
+
+        .method-copy h2 {
+          font-size: 40px
+        }
+
+        .method-copy .eyebrow {
+          margin-bottom: 14px
+        }
+
+        .train-row .editorial-photo {
+          order: 2
+        }
+
+        .editorial-photo>img {
+          aspect-ratio: 1.04;
+          object-position: center 30%
+        }
+
+        .method-callout {
+          font-size: 14px;
+          line-height: 1.7;
+          margin: 20px 0
+        }
+
+        .prose {
+          font-size: 13px;
+          line-height: 1.9
+        }
+
+        .photo-corner {
+          bottom: 15px;
+          left: 15px
+        }
+
+        .fast-panel {
+          display: block;
+          margin-block: 37px;
+          padding: 28px 25px
+        }
+
+        .fast-title h2 {
+          font-size: 37px;
+          margin-top: 18px
+        }
+
+        .fast-panel .prose {
+          margin-top: 21px
+        }
+
+        .eat-row .editorial-photo>img {
+          aspect-ratio: 1.2
+        }
+
+        .life-banner {
+          padding-block: 37px
+        }
+
+        .life-inner {
+          display: block
+        }
+
+        .life-inner h2 {
+          font-size: 42px;
+          max-width: 320px
+        }
+
+        .life-inner>div {
+          margin-top: 20px
+        }
+
+        .life-inner p {
+          font-size: 12px
+        }
+
+        .life-inner .button {
+          margin-top: 24px
+        }
+
+        .stories-section .section-heading {
+          align-items: flex-end;
+          gap: 15px;
+          margin-bottom: 28px
+        }
+
+        .stories-section h2 {
+          font-size: 40px
+        }
+
+        .section-subtitle {
+          font-size: 12px;
+          margin-top: 8px
+        }
+
+        .rail-controls {
+          gap: 5px
+        }
+
+        .round-button {
+          width: 42px;
+          height: 42px
+        }
+
+        .story-rail {
+          gap: 14px
+        }
+
+        .story-card {
+          flex-basis: 88%;
+          padding: 25px
+        }
+
+        .story-card h3 {
+          font-size: 27px;
+          min-height: 0
+        }
+
+        .story-excerpt {
+          font-size: 13px
+        }
+
+        .community-heading {
+          margin-top: 37px;
+          gap: 15px
+        }
+
+        .community-heading h3 {
+          font-size: 29px;
+          max-width: 190px
+        }
+
+        .community-shot {
+          flex-basis: 62%;
+          padding: 5px
+        }
+
+        .community-rail {
+          gap: 16px
+        }
+
+        .coached-intro h2 {
+          font-size: 43px;
+          margin-top: 18px
+        }
+
+        .coached-intro .prose {
+          margin-top: 21px
+        }
+
+        .coaching-features {
+          grid-template-columns: 1fr;
+          gap: 17px
+        }
+
+        .qa-card {
+          padding: 27px
+        }
+
+        .bonus-copy {
+          padding: 27px
+        }
+
+        .coaching-features h3 {
+          font-size: 29px
+        }
+
+        .bonus-card>img {
+          aspect-ratio: 2.1
+        }
+
+        .coach-heading h2 {
+          font-size: 43px
+        }
+
+        .coach-heading {
+          margin-bottom: 30px
+        }
+
+        .coach-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          align-items: stretch
+        }
+
+        .journey-photo img {
+          height: 205px
+        }
+
+        .journey-grid {
+          gap: 17px 12px
+        }
+
+        .journey-photo figcaption {
+          font-size: 9px
+        }
+
+        .journey-claim {
+          font-size: 10px;
+          line-height: 1.6;
+          margin-top: 18px
+        }
+
+        .coach-story p:first-child {
+          font-size: 26px
+        }
+
+        .for-you {
+          margin-bottom: 30px
+        }
+
+        .for-you h2 {
+          font-size: 41px
+        }
+
+        .for-you p:not(.eyebrow) {
+          font-size: 13px;
+          margin-top: 15px
+        }
+
+        .for-you p:last-child {
+          margin-top: 8px
+        }
+
+        .privacy-panel {
+          display: flex;
+          flex-direction: column
+        }
+
+        .privacy-image img {
+          min-height: 0;
+          height: 280px;
+          object-position: center 37%
+        }
+
+        .privacy-copy {
+          padding: 30px 26px
+        }
+
+        .privacy-copy h2 {
+          font-size: 40px;
+          margin-top: 18px
+        }
+
+        .privacy-copy p:not(.eyebrow) {
+          font-size: 13px;
+          margin-top: 17px
+        }
+
+        .privacy-copy .button {
+          margin-top: 23px
+        }
+
+        .faq-heading h2 {
+          font-size: 43px
+        }
+
+        .faq-section {
+          gap: 25px
+        }
+
+        .faqs summary {
+          font-size: 13px;
+          padding-block: 20px;
+          gap: 15px
+        }
+
+        .faq-answer {
+          padding-right: 8px
+        }
+
+        .waitlist-section {
+          padding-block: 45px
+        }
+
+        .waitlist-grid {
+          grid-template-columns: 1fr;
+          gap: 26px
+        }
+
+        .waitlist-section h2 {
+          font-size: 46px
+        }
+
+        .waitlist-intro {
+          font-size: 13px
+        }
+
+        .signup-card {
+          padding: 24px
+        }
+
+        .footer-inner {
+          justify-content: space-between;
+          gap: 10px
+        }
+
+        .footer-inner>a:last-child {
+          font-size: 10px
+        }
+
+        .footer-inner p {
+          font-size: 9px
+        }
+
+        footer {
+          padding-block: 25px 100px
+        }
+
+        .mobile-cta {
+          position: fixed;
+          inset: auto 0 0;
+          z-index: 20;
+          padding: 10px 20px max(10px, env(safe-area-inset-bottom));
+          background: var(--cream);
+          border-top: 1px solid var(--border);
+          display: block;
+          box-shadow: 0 -5px 25px #31064208
+        }
+
+        .mobile-cta .button {
+          width: 100%;
+          min-height: 50px;
+          justify-content: space-between;
+          box-shadow: none
+        }
+
+        dialog {
+          padding: 30px 23px
+        }
+
+        dialog h2 {
+          font-size: 31px
+        }
+
+        .dialog-close {
+          width: 40px;
+          height: 40px
+        }
+      }
+
+      @media(max-width:360px) {
+        .wrap {
+          width: calc(100% - 32px)
+        }
+
+        .logo {
+          width: 135px
+        }
+
+        .header-actions {
+          gap: 0
+        }
+
+        .language {
+          padding-inline-start: 8px;
+          gap: 6px
+        }
+
+        .social {
+          width: 32px
+        }
+
+        .hero h1 {
+          font-size: 43px
+        }
+
+        .hero-visual {
+          height: 410px
+        }
+
+        .hero-person {
+          height: 377px
+        }
+
+        .portrait-caption p {
+          font-size: 11px
+        }
+
+        .portrait-caption {
+          padding: 17px 18px
+        }
+
+        .availability {
+          font-size: 7.5px
+        }
+
+        .journey-photo img {
+          height: 175px
+        }
+
+        .stories-section .section-heading {
+          display: block
+        }
+
+        .stories-section .section-heading .rail-controls {
+          margin-top: 20px
+        }
+
+        .community-heading h3 {
+          font-size: 26px
+        }
+
+        .signup-card {
+          padding: 20px
+        }
+
+        .waitlist-section h2 {
+          font-size: 42px
+        }
+      }
+
+      @media(prefers-reduced-motion:reduce) {
+        html {
+          scroll-behavior: auto
+        }
+      }
+
+      /* Reserve media space before lazy images decode. */
+      img {
+        height: auto
+      }
+
+      .hero-person {
+        height: 530px
+      }
+
+      .editorial-photo>img {
+        height: auto
+      }
+
+      .privacy-image img {
+        height: 100%
+      }
+
+      .journey-photo img {
+        height: 220px
+      }
+
+      .footer-logo {
+        height: 42px
+      }
+
+      @media(min-width:1500px) {
+        .hero-person {
+          height: 555px
+        }
+      }
+
+      @media(max-width:1100px) {
+        .hero-person {
+          height: 490px
+        }
+      }
+
+      @media(max-width:800px) {
+        .hero-person {
+          height: 385px
+        }
+
+        .journey-photo img {
+          height: 180px
+        }
+      }
+
+      @media(max-width:580px) {
+        .hero-person {
+          height: 421px
+        }
+
+        .journey-photo img {
+          height: 205px
+        }
+
+        .privacy-image img {
+          height: 280px
+        }
+      }
+
+      @media(max-width:360px) {
+        .hero-person {
+          height: 377px
+        }
+
+        .journey-photo img {
+          height: 175px
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner"><a href="#top" aria-label="StrongerHer by Coach Hebah"><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgNjQwIDE1MCI+Cjx0ZXh0IHg9IjAiIHk9IjgyIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjcyIiBmaWxsPSIjMWYwMTJkIiBmb250LWZhbWlseT0iTnVuaXRvIFNhbnMsIHNhbnMtc2VyaWYiPlN0cm9uZ2VySGVyPC90ZXh0Pjx0ZXh0IHg9IjAiIHk9IjEyNiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIyMCIgbGV0dGVyLXNwYWNpbmc9IjIiIGZpbGw9IiM2NDE1ODgiIGZvbnQtZmFtaWx5PSJOdW5pdG8gU2Fucywgc2Fucy1zZXJpZiI+QlkgQ09BQ0ggSEVCQUg8L3RleHQ+Cjwvc3ZnPg=="
+            width="640" height="150" alt="StrongerHer by Coach Hebah" class="logo" loading="eager" decoding="async"></a>
+        <nav aria-label="Main navigation"><a href="#method">TRAIN</a><a href="#fast">FAST</a><a href="#eat">EAT</a><a
+            href="#coach">MEET YOUR COACH</a></nav>
+        <div class="header-actions"><a class="social" href="https://instagram.com/coachhebahsalem" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram @coachhebahsalem"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M17.5 6.5h.01" />
+            </svg></a><a class="language" href="https://coachhebah.com/strongerher/ar" lang="ar"
+            aria-label="Switch to العربية">العربية <span aria-hidden="true">↗</span></a><a class="home"
+            href="https://coachhebah.com/">BACK TO HOME</a></div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero wrap" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-line"></span>STRONGERHER LIVE BOOTCAMP</p>
+          <h1>Stronger. Leaner.<br> More Confident <span class="hero-emphasis">— in 6 Weeks.</span></h1>
+          <p class="hero-lead">A complete fat-loss and fitness system that works — built around athletic training,
+            Sunnah fasting, real food, and understanding your metabolism.</p>
+          <div class="hero-action">
+            <p class="availability"><span></span>THE NEXT LIVE BOOTCAMP IS COMING THIS SEPTEMBER</p><a class="button "
+              href="#waitlist-final">Join the Waitlist<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+            <p class="microcopy">Be the first to know when enrollment opens.</p>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait-backdrop" aria-hidden="true">
+            <div class="orbit"></div><span class="outline-word">StrongerHer</span>
+          </div><img src="assets/hero-hebah-cutout-CGiF7Tqr.png" width="886" height="1087" alt="Coach Hebah"
+            class="hero-person" loading="eager" decoding="async">
+          <div class="portrait-caption"><span class="caption-mark" aria-hidden="true">✦</span>
+            <p>Get results in six weeks. Leave with a system for life.</p>
+          </div>
+        </div>
+        <div class="hero-note">
+          <p class="hero-note-title">Forget extreme restriction and endless diet confusion.</p>
+          <p>Train like an athlete. Build real muscle. Transform your body. Fast the way the Prophet ﷺ taught us. Eat
+            real food. Understand your metabolism.</p>
+        </div>
+      </section>
+      <section id="system" class="system-section section">
+        <div class="wrap">
+          <div class="section-heading system-heading">
+            <div>
+              <p class="eyebrow">THE STRONGERHER SYSTEM</p>
+              <h2>Intentionally Stronger.</h2>
+            </div>
+            <p class="system-lead">Train with purpose. Fast the Sunnah. Eat real food. Understand your body.</p>
+          </div>
+          <div class="system-intro">
+            <div class="pillar-index" aria-label="The StrongerHer system"><a href="#method"><svg viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M6 5v14M3 8v8M18 5v14M21 8v8M6 12h12" />
+                </svg><span>TRAIN</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                  aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></a><a href="#fast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 13a8 8 0 1 1-9-9 7 7 0 0 0 9 9Z" />
+                </svg><span>FAST</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                  aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></a><a href="#eat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 20C2 18 3 7 4 4c9 0 17 3 14 10-1 4-4 5-6 6Zm0 0V10m0 4 4-3" />
+                </svg><span>EAT</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                  aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></a></div>
+            <p>StrongerHer brings athletic training, Sunnah fasting and real-food nutrition together into one complete
+              system for losing fat, building muscle and getting genuinely fit — while teaching you how to maintain your
+              results for life.</p>
+          </div>
+        </div>
+      </section>
+      <section id="method" class="section method-section wrap">
+        <div class="method-row train-row">
+          <div class="editorial-photo"><img src="assets/coach-hebah-dumbbell-C259x2OH.jpg" width="960" height="1280"
+              alt="Coach Hebah training with dumbbells" class="" loading="lazy" decoding="async">
+            <div class="photo-corner" aria-hidden="true">01 / TRAIN</div>
+          </div>
+          <div class="method-copy">
+            <p class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 5v14M3 8v8M18 5v14M21 8v8M6 12h12" />
+              </svg>TRAIN</p>
+            <h2>The Intentionally Stronger 2–2–1 Training System</h2>
+            <p class="method-callout">2 Strength. 2 HIIT. 1 Pilates/Mobility. One complete training week — in just 3
+              sessions.</p>
+            <div class="prose">
+              <p class="">Build real muscle. Improve your conditioning. Strengthen your core. Transform your body with
+                balanced, athletic training — all from home.</p>
+              <p class="">You don&#x27;t need to train like a man to train seriously. We use dumbbells at home and
+                progressive overload to build muscle and power.</p>
+              <p class="">Strength and HIIT are intelligently combined to build strength and conditioning without
+                turning five training components into five separate workout days.</p>
+              <p class="">Pilates and mobility develop your core strength, provide another full-body resistance-training
+                stimulus, and keep your joints flexible and strong.</p>
+            </div>
+          </div>
+        </div>
+        <div id="fast" class="fast-panel">
+          <div class="fast-title">
+            <p class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 13a8 8 0 1 1-9-9 7 7 0 0 0 9 9Z" />
+              </svg>FAST</p>
+            <h2>The Sunnah Weight Loss Method</h2>
+          </div>
+          <div class="prose">
+            <p class="">Fast twice a week the way the Prophet ﷺ taught us — and learn how to use those fasts
+              strategically for fat loss.</p>
+            <p class="">No complicated fasting schedules. No eating windows to obsess over. A simple, powerful rhythm
+              that helps create the calorie deficit that drives fat loss — without restricting yourself every day.</p>
+          </div>
+          <div class="moon-decoration" aria-hidden="true"></div>
+        </div>
+        <div class="method-row eat-row" id="eat">
+          <div class="method-copy">
+            <p class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20C2 18 3 7 4 4c9 0 17 3 14 10-1 4-4 5-6 6Zm0 0V10m0 4 4-3" />
+              </svg>EAT</p>
+            <h2>The Habit Stack</h2>
+            <p class="method-callout">Protein. High-volume real food. Daily movement. Simple habits that work.</p>
+            <div class="prose">
+              <p class="">Forget keto. Carnivore. Cutting out carbs. And whatever diet trend comes next.</p>
+              <p class="">Learn how your metabolism, hunger and fat loss actually work — so you&#x27;re no longer
+                jumping from one set of diet rules to another.</p>
+            </div>
+          </div>
+          <div class="editorial-photo"><img src="assets/coaching-setup-Cjz6JPXP.jpg" width="960" height="1280"
+              alt="Real-food nutrition" class="" loading="lazy" decoding="async">
+            <div class="photo-corner" aria-hidden="true">03 / EAT</div>
+          </div>
+        </div>
+      </section>
+      <section class="life-banner">
+        <div class="wrap life-inner">
+          <h2>Six Weeks. <br>A System for Life.</h2>
+          <div>
+            <p class="">Change the way you train, eat, fast and understand your body.</p>
+            <p class="">Build muscle. Lose fat. Get fitter. Learn the system.</p>
+            <p class="">Get results in six weeks. Leave knowing how to keep them for life.</p>
+          </div><a class="button button-gold" href="#waitlist-final">Join the Waitlist<svg viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></a>
+        </div>
+      </section>
+      <section id="success-stories" class="section stories-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <h2>This System Works.</h2>
+              <p class="section-subtitle">Real women. Real results. Six weeks of StrongerHer.</p>
+            </div>
+            <div class="rail-controls"><button class="round-button" data-rail="story-rail" data-direction="-1"
+                aria-label="Previous testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></button><button class="round-button" data-rail="story-rail" data-direction="1"
+                aria-label="Next testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></button></div>
+          </div>
+          <div class="story-rail" id="story-rail" tabindex="0" aria-label="Bootcamp member testimonials">
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>Lost 3 kg and Finally Stayed Consistent</h3>
+              <p class="story-excerpt">&quot;For years, I would lose weight and then gain it back again. I also found it
+                difficult to stay consistent because of the demands of daily life.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">S</span>
+                <div>
+                  <p>Salma Hassan</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="0">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>Everything Improved</h3>
+              <p class="story-excerpt">&quot;Everything improved — my energy, my headaches, my strength, and my
+                confidence.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">S</span>
+                <div>
+                  <p>Shazia Ahmad</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="1">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>Accountability Makes the Difference</h3>
+              <p class="story-excerpt">&quot;I recently completed Coach Hebah&#x27;s 6-week boot camp, and it was an
+                incredible experience.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">A</span>
+                <div>
+                  <p>Ateka Ali</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="2">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>Stronger After Injury</h3>
+              <p class="story-excerpt">&quot;I gained strength, consistency, energy, and confidence — and I&#x27;m no
+                longer afraid to challenge myself.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">S</span>
+                <div>
+                  <p>Sadiya Khan</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="3">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>She Understood Exactly What I Needed</h3>
+              <p class="story-excerpt">&quot;I was struggling with insulin resistance and constant fatigue, and I needed
+                an approach to nutrition and exercise that I could actually sustain.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">M</span>
+                <div>
+                  <p>Maya Rahman</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="4">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>I No Longer Feel Guilty After Meals</h3>
+              <p class="story-excerpt">&quot;Before the program, I moved between random eating and restriction, and I
+                didn&#x27;t know how to organize my meals in a way I could maintain.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">R</span>
+                <div>
+                  <p>Ruba Khaled</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="5">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>The Recordings Removed My Excuses</h3>
+              <p class="story-excerpt">&quot;Before joining, my activity level was mostly limited to household chores,
+                and the idea of committing to exercise felt difficult.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">H</span>
+                <div>
+                  <p>Huda Mansour</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="6">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>I Never Felt Deprived</h3>
+              <p class="story-excerpt">&quot;One of my biggest struggles was self-control around food and finding the
+                motivation to exercise consistently.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">Z</span>
+                <div>
+                  <p>Zara Karim</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="7">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>Simple, Manageable, and Sustainable</h3>
+              <p class="story-excerpt">&quot;Before joining, I struggled with inconsistent meals, low activity levels,
+                and not knowing where to start with nutrition or exercise.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">T</span>
+                <div>
+                  <p>Tayyiba Nour</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="8">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>The Accountability I Was Missing</h3>
+              <p class="story-excerpt">&quot;I wasn&#x27;t looking to lose weight. My goal was to cope better with
+                perimenopause symptoms, build strength, and support my joints.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">M</span>
+                <div>
+                  <p>Mina Ahmed</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="9">Read full story →</button>
+            </article>
+            <article class="story-card"><span class="quote-mark" aria-hidden="true">“</span>
+              <h3>My Aches and Pains Improved Tremendously</h3>
+              <p class="story-excerpt">&quot;Going through perimenopause, I knew how important regular exercise was, but
+                I struggled to stay disciplined on my own.&quot;</p>
+              <div class="story-person"><span class="avatar" aria-hidden="true">R</span>
+                <div>
+                  <p>Rahma Saleh</p><span>Bootcamp Member</span>
+                </div>
+              </div><button class="text-button" data-story="10">Read full story →</button>
+            </article>
+          </div>
+          <div class="community-heading">
+            <h3>A Peek Inside the Program</h3>
+            <div class="rail-controls"><button class="round-button" data-rail="community-rail" data-direction="-1"
+                aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></button><button class="round-button" data-rail="community-rail" data-direction="1"
+                aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></button></div>
+          </div>
+          <div class="community-rail" id="community-rail" tabindex="0" aria-label="A Peek Inside the Program">
+            <figure class="community-shot"><img src="assets/comm-en-peerpressure-yDLhSbwB.jpg" width="863" height="1920"
+                alt="Members holding each other accountable" class="" loading="lazy" decoding="async"></figure>
+            <figure class="community-shot"><img src="assets/comm-en-fasting-v2-DfdkISjG.jpg" width="863" height="1920"
+                alt="Member sharing first time exercising while fasting" class="" loading="lazy" decoding="async">
+            </figure>
+            <figure class="community-shot"><img src="assets/comm-both-seeyou-Be2p9V3r.jpg" width="863" height="1920"
+                alt="Member thanking coach for the live session" class="" loading="lazy" decoding="async"></figure>
+            <figure class="community-shot"><img src="assets/comm-both-gettingthere-v2-Dmu_F8gT.jpg" width="863"
+                height="1920" alt="Great session — I&#x27;m getting there" class="" loading="lazy" decoding="async">
+            </figure>
+            <figure class="community-shot"><img src="assets/comm-both-iftars-BYM0FEep.jpg" width="863" height="1920"
+                alt="Members sharing healthy iftar plates" class="" loading="lazy" decoding="async"></figure>
+          </div>
+        </div>
+      </section>
+      <section class="section coached-section" id="coached">
+        <div class="wrap coached-grid">
+          <div class="coached-intro">
+            <p class="eyebrow">SIX WEEKS. COACHED.</p>
+            <h2>A System — With a Coach and Sisters Beside You.</h2>
+            <div class="prose">
+              <p class="">For six weeks, you’ll put the StrongerHer system into practice alongside other Muslim women,
+                with three structured training sessions each week, nutrition and fasting guidance, accountability, and
+                direct access to me.</p>
+              <p class="">Along the way, you’ll learn the science behind the system — metabolism, calories and fat loss,
+                protein, hunger and satiety, building muscle, Sunnah fasting, and how to maintain your results.</p>
+            </div><a class="button " href="#waitlist-final">Join the Waitlist<svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg></a>
+          </div>
+          <div class="coaching-features">
+            <article class="qa-card">
+              <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a9 9 0 0 1-13 8L3 21l1.5-5A9 9 0 1 1 21 11.5Z" />
+                </svg></div>
+              <h3>Weekly Live Coaching Q&amp;A</h3>
+              <p class="">Every week, we meet live. Bring your questions, struggles and progress. We’ll troubleshoot
+                your training, nutrition, fasting and results together — so you understand not only what works, but why
+                it works and how to make it work for you.</p>
+            </article>
+            <article class="bonus-card"><img src="assets/nutrition-herbs-B4y-hk9O.png" width="1536" height="1024" alt=""
+                class="" loading="lazy" decoding="async">
+              <div class="bonus-copy">
+                <p class="eyebrow gold-label">BONUS</p>
+                <h3>Herbs &amp; Traditional Wellness</h3>
+                <p class="bonus-lead">Some of the most powerful traditional foods may already be in your kitchen.</p>
+                <p class="">Explore the science behind familiar herbs and traditional foods like black seed, turmeric
+                  and cinnamon — what the evidence says, how they may support metabolic health and wellness, and how to
+                  use them in everyday life.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section coach-section wrap" id="coach">
+        <div class="section-heading coach-heading">
+          <p class="eyebrow">MEET YOUR COACH</p>
+          <h2>25 Years of Coaching. Five Children. Still Getting Stronger.</h2>
+        </div>
+        <div class="coach-grid">
+          <div class="journey">
+            <div class="journey-label"><span>Then</span><span>Now</span></div>
+            <div class="journey-grid">
+              <figure class="journey-photo"><img src="assets/coach-before-lab-v3-DdA0m-Rh.jpg" width="1280" height="960"
+                  alt="Working in the lab — before my health journey" class="" loading="lazy" decoding="async">
+                <figcaption>Working in the lab — before my health journey</figcaption>
+              </figure>
+              <figure class="journey-photo"><img src="assets/coach-current-dumbbell-CzJS8JH4.png" width="1254"
+                  height="1254" alt="Today — coaching women in strength &amp; nutrition" class="" loading="lazy"
+                  decoding="async">
+                <figcaption>Today — coaching women in strength &amp; nutrition</figcaption>
+              </figure>
+              <figure class="journey-photo"><img src="assets/coach-before-rainbow-v3-B6NtFRx-.jpg" width="1280"
+                  height="960" alt="Family days — still carrying extra weight" class="" loading="lazy" decoding="async">
+                <figcaption>Family days — still carrying extra weight</figcaption>
+              </figure>
+              <figure class="journey-photo"><img src="assets/coach-current-living-room-g4kGUNoS.jpg" width="1189"
+                  height="1280" alt="Today — staying active, at home in Istanbul" class="" loading="lazy"
+                  decoding="async">
+                <figcaption>Today — staying active, at home in Istanbul</figcaption>
+              </figure>
+            </div>
+            <p class="journey-claim">80 pounds (36 kg) lost — and still getting stronger</p>
+          </div>
+          <div class="coach-story prose">
+            <p class="">I’m Coach Hebah — fitness instructor, mother of five, and creator of StrongerHer and the
+              Intentionally Stronger training system.</p>
+            <p class="">My own transformation started long before StrongerHer. I lost 80 pounds (36 kg) and went on to
+              build a career in fitness, teaching thousands of classes and staying active through five pregnancies.</p>
+            <p class="">But in my 40s, my body changed again. I gained weight I couldn&#x27;t seem to shift using the
+              same strategies that had always worked for me.</p>
+            <p class="">That experience ultimately changed the way I approach fat loss. By combining athletic training,
+              Sunnah fasting, real food and a better understanding of my metabolism, I lost the final 10 pounds —
+              without living on a diet.</p>
+            <p class="">At 48, I’m leaner, fitter and stronger than I was at 38.</p>
+            <p class="">Now I teach Muslim women the system I wish I&#x27;d had years ago.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section fit-section">
+        <div class="wrap">
+          <div class="for-you" id="for-you">
+            <p class="eyebrow">IS STRONGERHER FOR YOU?</p>
+            <h2>For Muslim Women Ready for Real Change.</h2>
+            <p class="">You don’t need to be fit already. You do need to be ready to work, learn and be consistent.</p>
+            <p class="">Give StrongerHer six weeks — and see what your body can do.</p>
+          </div>
+          <div class="privacy-panel" id="muslim-women">
+            <div class="privacy-image"><img src="assets/coach-hebah-desk-Dp-Et-66.jpg" width="960" height="1280"
+                alt="Coach Hebah coaching women online" class="" loading="lazy" decoding="async"></div>
+            <div class="privacy-copy">
+              <p class="eyebrow">BUILT FOR MUSLIM WOMEN</p>
+              <h2>Train Hard. Train Comfortably. Train Privately.</h2>
+              <p class="">StrongerHer is a women-only space where you can train seriously and comfortably.</p>
+              <p class="">No music. No mixed-gender gym. No compromising your values.</p>
+              <p class="">Effective, athletic training — created by a Muslim woman, for Muslim women.</p><a
+                class="button button-light" href="#waitlist-final">Join the Waitlist<svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section faq-section wrap" id="faq">
+        <div class="faq-heading">
+          <h2>Frequently Asked Questions</h2><a class="contact-text" href="https://wa.me/905519616033" target="_blank"
+            rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a9 9 0 0 1-13 8L3 21l1.5-5A9 9 0 1 1 21 11.5Z" />
+            </svg>Have questions? Contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg></a>
+        </div>
+        <div class="faqs">
+          <details>
+            <summary>Do I need to be fit before joining?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">No.</p>
+              <p class="">Beginners are welcome, and all exercises can be modified to your current fitness level.</p>
+              <p class="">Whether you&#x27;re just getting started or returning to exercise after a long break,
+                you&#x27;ll be able to participate and progress at your own pace.</p>
+            </div>
+          </details>
+          <details>
+            <summary>I already work out. Will I still benefit?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Yes.</p>
+              <p class="">Many women in my programs already exercise regularly but struggle with consistency,
+                progression, nutrition, or seeing the results they want.</p>
+              <p class="">You&#x27;ll benefit from the coaching, structure, accountability, nutrition education, and
+                community support built into the program.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What if I have knee pain, back pain, injuries, or medical conditions?<span class="plus"
+                aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Many exercises can be modified to accommodate common aches, pains, and limitations.</p>
+              <p class="">However, if you have a medical condition, recent surgery, pregnancy, or any situation that may
+                affect your ability to exercise safely, you should obtain clearance from your healthcare provider before
+                participating.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Do I need equipment?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">For best results, I recommend having a set of light, medium, and heavy dumbbells.</p>
+              <p class="">Ideally:<br>• One light pair<br>• One medium pair<br>• One heavy pair</p>
+              <p class="">If that isn&#x27;t possible, start with whatever you have available and we will help you make
+                it work.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How much time will this take each week?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Most women attend 2–4 live workouts per week and one nutrition session.</p>
+              <p class="">You can participate at the level that fits your schedule, and all sessions are recorded if you
+                need additional flexibility.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Do I have to fast?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">No.</p>
+              <p class="">The nutrition system includes optional Sunnah fasting principles, but modifications are
+                available based on your individual circumstances and goals.</p>
+              <p class="">You can still benefit from the program even if fasting is not appropriate for you.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Do I need to follow a special diet?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">No.</p>
+              <p class="">The program is built around real food and practical habits that fit into everyday life.</p>
+              <p class="">You do not need to purchase special foods, meal replacements, or follow an extreme diet.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What if I don&#x27;t want to lose weight?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">That&#x27;s perfectly fine.</p>
+              <p class="">While many women join to lose fat, the program is also designed to help you build strength,
+                improve fitness, increase energy, improve your health, and develop sustainable habits that support
+                long-term wellbeing.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What if I miss a class?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Life happens.</p>
+              <p class="">All workout sessions and nutrition sessions are recorded, so you can catch up when it suits
+                your schedule.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What if I can&#x27;t attend live?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">You can still participate.</p>
+              <p class="">All workouts and nutrition sessions are recorded, so you&#x27;ll continue to have access to
+                the coaching and content even if you occasionally miss a live session.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Are recordings included?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Yes.</p>
+              <p class="">Workout recordings and nutrition session recordings will be available throughout the program.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Do participants sign a privacy agreement?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Yes.</p>
+              <p class="">All participants will be required to agree to the program&#x27;s privacy guidelines before
+                joining.</p>
+              <p class="">This includes respecting the privacy of Coach Hebah and fellow participants and not sharing
+                access links, recordings, screenshots, or program materials outside the program.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Will I appear in the recordings?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">Workout and nutrition sessions will be recorded for participants who cannot attend live.</p>
+              <p class="">Participant video will not be featured in the recordings. However, participant audio may
+                occasionally be captured if questions are asked during class or discussion.</p>
+              <p class="">For this reason, please avoid sharing any personal information that you would not want other
+                program members to hear.</p>
+              <p class="">Recordings are provided exclusively for StrongerHer participants and may not be shared,
+                distributed, downloaded, reposted, or used outside the program.</p>
+              <p class="">All participants agree to respect the privacy of Coach Hebah and fellow members by not sharing
+                recordings, screenshots, class links, or program materials outside the community.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Do I have to turn my camera on?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer">
+              <p class="">No.</p>
+              <p class="">Many women choose to keep their cameras off.</p>
+              <p class="">However, if you turn your camera on, Coach Hebah can provide real-time coaching, form
+                corrections, and more personalized guidance during class.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="waitlist-section" id="waitlist-final" tabindex="-1">
+        <div class="wrap waitlist-grid">
+          <div>
+            <p class="eyebrow">READY TO GET STRONGER?</p>
+            <h2>Your StrongerHer Starts This September.</h2>
+            <p class="waitlist-intro">The next 6-Week StrongerHer Live Bootcamp is coming soon.</p>
+          </div>
+          <div class="signup-card">
+            <form action="https://assets.mailerlite.com/jsonp/2522926/forms/195493785684150250/subscribe" method="post"
+              target="_blank"><label for="email">Email</label><input id="email" name="fields[email]" type="email"
+                placeholder="Email" required autocomplete="email" aria-required="true"><input type="hidden"
+                name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><button class="button"
+                type="submit">Join the Waitlist<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg></button></form>
+            <p class="microcopy">Be the first to know when enrollment opens.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-inner"><a href="#top" aria-label="StrongerHer"><img
+            src="assets/strongerher-logo-B5CklW5c.png" width="1920" height="819" alt="StrongerHer" class="footer-logo"
+            loading="lazy" decoding="async"></a>
+        <p>© 2026 StrongerHer · Coaching for Muslim women</p><a href="https://instagram.com/coachhebahsalem"
+          target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <path d="M17.5 6.5h.01" />
+          </svg>@coachhebahsalem</a>
+      </div>
+    </footer>
+    <div class="mobile-cta" hidden><a class="button " href="#waitlist-final">Join the Waitlist<svg viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg></a></div>
+    <dialog id="story-dialog" aria-labelledby="story-title"><button class="dialog-close round-button"
+        aria-label="Close">×</button>
+      <p class="eyebrow">Success Story</p>
+      <h2 id="story-title"></h2>
+      <p id="story-badge"></p>
+      <div id="story-body" class="prose"></div>
+    </dialog>
+    <script type="application/json"
+      id="stories-data">[{"name": "Salma Hassan", "badge": "Lost 3 kg and Finally Stayed Consistent", "excerpt": "For years, I would lose weight and then gain it back again. I also found it difficult to stay consistent because of the demands of daily life.", "full": "For years, I would lose weight and then gain it back again. I also found it difficult to stay consistent because of the demands of daily life.\n\nThe two things that helped me most were understanding calories more clearly and following the 5:2 fasting system. Together, they gave me a simple structure I could actually stick to.\n\nDuring the program, I noticed improvements in both my energy and consistency. The support, encouragement, and sharing within the group made a huge difference. In about 6 weeks, I lost nearly 3 kg, but more importantly, I gained knowledge and habits that I can continue with, inshaAllah."}, {"name": "Shazia Ahmad", "badge": "Everything Improved", "excerpt": "Everything improved — my energy, my headaches, my strength, and my confidence.", "full": "Everything improved — my energy, my headaches, my strength, and my confidence.\n\nBefore joining, I lived a very sedentary lifestyle and struggled with consistency, back pain, and low energy.\n\nThe nutrition coaching helped me understand how to build my plate properly, prioritize protein, and recognize the habits that were holding me back. The workouts were supportive, challenging, and adapted to my level.\n\nThe biggest surprise was how much stronger I became. I was even able to do push-ups on my toes for the first time.\n\nI highly recommend this program to women over 45 who want to become stronger, healthier, and more confident."}, {"name": "Ateka Ali", "badge": "Accountability Makes the Difference", "excerpt": "I recently completed Coach Hebah's 6-week boot camp, and it was an incredible experience.", "full": "I recently completed Coach Hebah's 6-week boot camp, and it was an incredible experience. I already knew a lot about nutrition and fitness, but one thing I've learned is that consistency comes from being part of a supportive community.\n\nThe cohort-based format was one of the most valuable aspects of the program. With live classes three times a week, you show up. It's much harder to make excuses when your instructor and classmates are expecting you. That built-in accountability makes a huge difference.\n\nI also loved the nutrition component. Sharing my meals, tracking protein, and receiving feedback helped me become much more intentional about my daily habits.\n\nCoach Hebah is an exceptional instructor. She meets people where they are, adapts workouts to different fitness levels, and always encourages you to push just a little beyond what you think you can do."}, {"name": "Sadiya Khan", "badge": "Stronger After Injury", "excerpt": "I gained strength, consistency, energy, and confidence — and I'm no longer afraid to challenge myself.", "full": "I gained strength, consistency, energy, and confidence — and I'm no longer afraid to challenge myself.\n\nBefore joining, I was afraid to exercise because of an elbow injury. With Coach Hebah, I felt safe pushing myself because she always knew when to modify an exercise, when to push through, and when to stop.\n\nI gained strength, improved my sleep, started lifting heavier, and became much more confident in what my body can do.\n\nI've trained with Coach Hebah on and off for 18 years through pregnancies, injuries, weight gain, and life's challenges. As a busy mom of seven, people often ask me what my secret is — and a big part of the answer is having Hebah as my coach."}, {"name": "Maya Rahman", "badge": "She Understood Exactly What I Needed", "excerpt": "I was struggling with insulin resistance and constant fatigue, and I needed an approach to nutrition and exercise that I could actually sustain.", "full": "I was struggling with insulin resistance and constant fatigue, and I needed an approach to nutrition and exercise that I could actually sustain.\n\nOne of the things that surprised me most was how much better I felt once I changed my eating habits. My energy increased, and exercise became part of my routine instead of something I kept putting off.\n\nWhat makes Coach Hebah different is that she pays attention to the small details and understands the needs of each woman. During training, it often felt like she was talking about exactly what my body was experiencing in that moment.\n\nToday I feel stronger and more capable of continuing toward my goals with confidence."}, {"name": "Ruba Khaled", "badge": "I No Longer Feel Guilty After Meals", "excerpt": "Before the program, I moved between random eating and restriction, and I didn't know how to organize my meals in a way I could maintain.", "full": "Before the program, I moved between random eating and restriction, and I didn't know how to organize my meals in a way I could maintain.\n\nI learned how to balance my calories and prioritize protein, but the biggest change was that my relationship with food became much healthier. I no longer feel guilty after meals the way I used to.\n\nI also noticed improvements in my energy and endurance, and the workouts were flexible and easy to follow. Even when I couldn't attend the live sessions, the recordings helped me stay consistent.\n\nWhat I loved most was that the program was practical and fit into everyday life."}, {"name": "Huda Mansour", "badge": "The Recordings Removed My Excuses", "excerpt": "Before joining, my activity level was mostly limited to household chores, and the idea of committing to exercise felt difficult.", "full": "Before joining, my activity level was mostly limited to household chores, and the idea of committing to exercise felt difficult.\n\nI loved that the workouts were suitable for different fitness levels. Over time, I noticed a clear improvement in my energy and endurance. The biggest surprise was that I could complete an entire workout without feeling exhausted the way I did at the beginning.\n\nI also learned how to organize my calories and protein intake, and I liked the practical combination of fasting and calorie control.\n\nThe recordings were a huge advantage for me because they removed my excuses. There was always a way to stay consistent."}, {"name": "Zara Karim", "badge": "I Never Felt Deprived", "excerpt": "One of my biggest struggles was self-control around food and finding the motivation to exercise consistently.", "full": "One of my biggest struggles was self-control around food and finding the motivation to exercise consistently.\n\nOne of the biggest lessons I learned was that when I made protein a priority, I felt much fuller and was far less likely to binge eat or reach for junk food. I also noticed that focusing on filling, nutritious foods helped me snack much less.\n\nWhat surprised me most was that the program wasn't restrictive. The 5:2 fasting days provided structure, but I never felt deprived or like I was constantly dieting.\n\nThe support, encouragement, and flexibility made all the difference."}, {"name": "Tayyiba Nour", "badge": "Simple, Manageable, and Sustainable", "excerpt": "Before joining, I struggled with inconsistent meals, low activity levels, and not knowing where to start with nutrition or exercise.", "full": "Before joining, I struggled with inconsistent meals, low activity levels, and not knowing where to start with nutrition or exercise.\n\nWhat I loved most about this program was how simple and manageable it felt. The 5:2 structure gave me a clear plan to follow, and the nutrition lessons helped me finally understand portion sizes and protein intake without feeling overwhelmed.\n\nI noticed improvements in my strength, energy, and consistency, and for the first time I felt like I was building habits I could actually maintain long term.\n\nWhat surprised me most was how much progress I could make without following a restrictive diet or spending hours exercising."}, {"name": "Mina Ahmed", "badge": "The Accountability I Was Missing", "excerpt": "I wasn't looking to lose weight. My goal was to cope better with perimenopause symptoms, build strength, and support my joints.", "full": "I wasn't looking to lose weight. My goal was to cope better with perimenopause symptoms, build strength, and support my joints.\n\nBefore joining, I struggled with consistency in both exercise and healthy eating. The combination of live sessions, nutrition guidance, and the WhatsApp group gave me the accountability and support I was missing and helped me stop procrastinating.\n\nOver the six weeks, I noticed positive changes in my physique, felt stronger, and became much more consistent with my habits.\n\nCoach Hebah was truly the answer to my duaa, and the support from both the coaching and community made all the difference."}, {"name": "Rahma Saleh", "badge": "My Aches and Pains Improved Tremendously", "excerpt": "Going through perimenopause, I knew how important regular exercise was, but I struggled to stay disciplined on my own.", "full": "Going through perimenopause, I knew how important regular exercise was, but I struggled to stay disciplined on my own.\n\nCoach Hebah's motivating words, careful explanations, and guidance truly revitalized me. Her program is suitable for all levels and ages, with exercises that work the whole body.\n\nI started noticing a difference after the very first week. Within a few short weeks, my muscles felt stronger and the aches and pains I had been experiencing improved tremendously. Allahumma barik.\n\nI am so grateful for this experience and definitely want to continue, inshaAllah."}]</script>
+    <script>(() => {
+        'use strict';
+        const stories = JSON.parse(document.getElementById('stories-data').textContent);
+        const dialog = document.getElementById('story-dialog');
+        let opener;
+        document.querySelectorAll('[data-story]').forEach(button => {
+          button.addEventListener('click', () => {
+            opener = button;
+            const story = stories[Number(button.dataset.story)];
+            document.getElementById('story-title').textContent = story.name;
+            document.getElementById('story-badge').textContent = story.badge;
+            const body = document.getElementById('story-body');
+            body.replaceChildren(...story.full.split(/\n\s*\n/).map(text => {
+              const p = document.createElement('p'); p.textContent = text; return p;
+            }));
+            dialog.showModal();
+            document.body.classList.add('modal-open');
+          });
+        });
+        dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+        dialog.addEventListener('keydown', event => {
+          if (event.key !== 'Tab') return;
+          const focusable = Array.from(dialog.querySelectorAll('button,a[href],input,[tabindex="0"]')).filter(e => !e.disabled);
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        });
+        dialog.addEventListener('click', event => {
+          const r = dialog.getBoundingClientRect();
+          if (event.target === dialog && (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom)) dialog.close();
+        });
+        dialog.addEventListener('close', () => {
+          document.body.classList.remove('modal-open');
+          opener?.focus({ preventScroll: true });
+        });
+        const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+        document.querySelectorAll('[data-rail]').forEach(button => {
+          const rail = document.getElementById(button.dataset.rail);
+          button.addEventListener('click', () => {
+            const card = rail.firstElementChild;
+            const gap = parseFloat(getComputedStyle(rail).gap) || 0;
+            rail.scrollBy({ left: (card.getBoundingClientRect().width + gap) * Number(button.dataset.direction), behavior: reduced.matches ? 'instant' : 'smooth' });
+          });
+          const update = () => {
+            button.disabled = Number(button.dataset.direction) < 0 ? rail.scrollLeft < 2 : rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 2;
+          };
+          rail.addEventListener('scroll', update, { passive: true });
+          new ResizeObserver(update).observe(rail);
+          update();
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+          link.addEventListener('click', event => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+            event.preventDefault();
+            target.scrollIntoView({ behavior: reduced.matches ? 'instant' : 'smooth', block: 'start' });
+            if (target.id === 'waitlist-final') target.focus({ preventScroll: true });
+            history.replaceState(null, '', link.getAttribute('href'));
+          });
+        });
+        const sticky = document.querySelector('.mobile-cta');
+        const hero = document.querySelector('.hero-action');
+        const signup = document.getElementById('waitlist-final');
+        const updateSticky = () => {
+          const hr = hero.getBoundingClientRect(), sr = signup.getBoundingClientRect();
+          sticky.hidden = !(hr.bottom < 0 && sr.top > innerHeight);
+        };
+        window.addEventListener('scroll', updateSticky, { passive: true });
+        window.addEventListener('resize', updateSticky);
+        new IntersectionObserver(updateSticky, { threshold: [0, .01, 1] }).observe(signup);
+        updateSticky();
+        // Original MailerLite form action and fields are preserved. The provider opens
+        // in a new tab and reports the real result; no simulated success is displayed.
+      })();
+    </script>
+  </body>
+
+</html>

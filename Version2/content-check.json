@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "missing_original_copy_blocks": [],
+  "all_testimonial_data_exact": true,
+  "all_faq_answers_exact": true,
+  "testimonials": 11,
+  "faqs": 14,
+  "images": 16,
+  "portable_bytes": 14292736,
+  "section_order": [
+    "top",
+    "success-stories",
+    "system",
+    "method",
+    [
+      "life-banner"
+    ],
+    "coached",
+    "community",
+    "coach",
+    [
+      "section",
+      "fit-section"
+    ],
+    "faq",
+    "waitlist-final"
+  ]
+}
